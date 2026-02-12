@@ -23,7 +23,7 @@ import juice from './Fruit J P.jpeg';
 import machine from './Fully automatic labeling machine.png';
 import shrink from './shrink.png';
 import shrinkA from './Automatic shrink wraping machine.jpeg';
-import bottle from './Mineral Water Plant.png';
+import bottle from './Mineral water plant.png';
 import ro from './RO Plant.jpeg';
 import csdCarbonator from './Carbonator.jpeg';
 import juiceFilling from './Fruit juice filling machine.jpeg';
