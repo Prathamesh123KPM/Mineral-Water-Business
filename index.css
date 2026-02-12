@@ -1,0 +1,23 @@
+/* Custom styles to supplement Tailwind CDN */
+
+/* Add spacing between paragraphs in rich text descriptions */
+.prose p {
+  margin-bottom: 1.5em;
+  line-height: 1.75;
+}
+
+/* Ensure strong tags stand out */
+.prose strong {
+  font-weight: 700;
+  color: #0f172a; /* slate-900 */
+}
+
+/* Add some spacing to lists if they are used later */
+.prose ul, .prose ol {
+  margin-bottom: 1.25em;
+  margin-left: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
+}
