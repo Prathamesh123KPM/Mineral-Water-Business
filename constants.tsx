@@ -449,7 +449,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Project Management Team",
     readTime: "12 min read",
     category: "Guides",
-    image: mineralWaterPlantImg
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800"
   },
   {
     id: 'how-to-start-mineral-water-business-india-2026',
