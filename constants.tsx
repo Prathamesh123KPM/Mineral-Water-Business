@@ -402,6 +402,102 @@ export const CLIENT_LOGOS = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: 'mineral-water-plant-setup-cost-process-profit-2026',
+    title: "Mineral Water Plant Setup Cost, Process & Profit in 2026: Complete Business Guide",
+    excerpt: "An in-depth analysis of the investment required, the technical purification process, and projected profit margins for a mineral water plant in 2026.",
+    content: `
+      <p>Entering the mineral water industry requires a clear understanding of the financial commitment and operational complexities involved. In 2026, with advanced filtration technologies and automated systems, the landscape has become more efficient but also more competitive. This guide breaks down the essential components of setup cost, production process, and profitability.</p>
+
+      <h2>1. Estimated Setup Cost (2026)</h2>
+      <p>The total investment for a mineral water plant can vary significantly based on capacity and automation levels. Here’s a rough breakdown for a standard 2000 BPH (Bottles Per Hour) plant:</p>
+      <ul>
+        <li><strong>Machinery & Equipment:</strong> ₹15 Lakhs to ₹35 Lakhs (depending on speed and grade of SS).</li>
+        <li><strong>Land & Civil Works:</strong> ₹10 Lakhs to ₹50 Lakhs (location dependent).</li>
+        <li><strong>Utilities (Power, Water, Boiler):</strong> ₹5 Lakhs to ₹10 Lakhs.</li>
+        <li><strong>Licensing & Documentation:</strong> ₹2 Lakhs to ₹5 Lakhs (ISI, FSSAI, PCB).</li>
+        <li><strong>Initial Working Capital:</strong> ₹5 Lakhs to ₹10 Lakhs.</li>
+      </ul>
+      <p><strong>Total Initial Investment:</strong> Approximately ₹40 Lakhs to ₹1.1 Crore for a medium-scale setup.</p>
+
+      <h2>2. The Technical Production Process</h2>
+      <p>A modern plant follows a rigorous purification and packaging sequence to ensure safety and compliance:</p>
+      <ol>
+        <li><strong>Raw Water Storage:</strong> Collecting water from the source in large tanks.</li>
+        <li><strong>Multi-Grade Filtration:</strong> Removing suspended solids and turbidity.</li>
+        <li><strong>Activated Carbon Filtration:</strong> Eliminating color, odor, and chlorine.</li>
+        <li><strong>Reverse Osmosis (RO):</strong> Reducing TDS (Total Dissolved Solids) and removing contaminants.</li>
+        <li><strong>UV & Ozone Treatment:</strong> Ensuring 100% microbiological safety.</li>
+        <li><strong>Automatic Filling & Capping:</strong> High-speed hygienic bottling in a clean-room environment.</li>
+        <li><strong>Labeling & Packaging:</strong> Applying batch codes and shrink-wrapping for distribution.</li>
+      </ol>
+
+      <h2>3. Profitability and ROI</h2>
+      <p>The profit margins in the mineral water business typically range from <strong>15% to 25%</strong>. Key factors influencing profitability include:</p>
+      <ul>
+        <li><strong>Direct Costs:</strong> Raw materials (preforms, caps, labels), electricity, and labor.</li>
+        <li><strong>Distribution Efficiency:</strong> Optimizing logistics to reduce transport costs.</li>
+        <li><strong>Brand Positioning:</strong> Premium branding can command higher retail prices.</li>
+      </ul>
+      <p>With a well-managed distribution network, most plants achieve a <strong>Return on Investment (ROI)</strong> within 18 to 36 months.</p>
+
+      <h2>4. Future Trends in 2026</h2>
+      <p>Stay ahead of the curve by adopting sustainable practices like energy-recovery RO systems and lightweight bottle designs. Digital monitoring of TDS levels and production output via mobile apps is becoming the standard for modern entrepreneurs.</p>
+
+      <p>Ready to start your journey? Krupashindu provides end-to-end consultancy and turnkey machinery setup to ensure your business is profitable from day one.</p>
+    `,
+    date: "April 6, 2026",
+    author: "Project Management Team",
+    readTime: "12 min read",
+    category: "Guides",
+    image: "https://images.unsplash.com/photo-1548678967-f1fc5d33904e?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: 'how-to-start-mineral-water-business-india-2026',
+    title: "How to Start a Profitable Mineral Water Business in India: Step-by-Step Guide (2026)",
+    excerpt: "A comprehensive 2026 roadmap for entrepreneurs looking to enter the booming Indian packaged drinking water market. From ISI certification to high-yield automation.",
+    content: `
+      <p>The demand for packaged drinking water in India is at an all-time high, driven by increasing health consciousness and urban expansion. Starting a mineral water plant in 2026 requires a blend of strategic planning, regulatory compliance, and state-of-the-art technology. Here is your definitive guide to launching a profitable venture.</p>
+
+      <h2>1. Market Research and Business Plan</h2>
+      <p>Before investing, conduct thorough market research. Identify your target audience—is it retail consumers (200ml to 1L bottles), corporate offices (20L jars), or the hospitality sector? A well-structured business plan should include your financial projections, marketing strategy, and a detailed <strong>mineral water project report</strong>.</p>
+
+      <h2>2. Location and Infrastructure</h2>
+      <p>Choose a location with a sustainable water source (borewell or municipal supply) and good industrial connectivity. You’ll need a minimum of 1000–2000 sq. ft. for a small-scale plant. Ensure the layout complies with <strong>BIS (Bureau of Indian Standards)</strong> norms, segregating the treatment, filling, and packaging areas.</p>
+
+      <h2>3. Legal Requirements and Certifications</h2>
+      <p>In India, you cannot sell packaged drinking water without an <strong>ISI Mark</strong> from BIS. Other essential certifications include:</p>
+      <ul>
+        <li><strong>FSSAI License:</strong> Mandatory for all food and beverage businesses.</li>
+        <li><strong>Pollution Control Board (NOC):</strong> To ensure environmental compliance.</li>
+        <li><strong>Local Municipal Permission:</strong> Trade license and land use permits.</li>
+        <li><strong>GST Registration:</strong> For tax compliance.</li>
+      </ul>
+
+      <h2>4. Selection of Machinery and Technology</h2>
+      <p>Your machinery is the heart of your business. A standard mineral water plant includes:</p>
+      <ul>
+        <li><strong>Water Treatment Plant:</strong> Including RO, UV sterilization, and Ozone disinfection.</li>
+        <li><strong>Blowing Machine:</strong> To manufacture PET bottles on-site.</li>
+        <li><strong>Rinsing, Filling, and Capping (RFC) Monoblock:</strong> For hygienic bottling.</li>
+        <li><strong>Labeling and Batch Coding Machine:</strong> For branding and statutory details.</li>
+      </ul>
+      <p>Investing in <strong>high-yield automation</strong> reduces labor costs and ensures consistent quality.</p>
+
+      <h2>5. Branding and Distribution</h2>
+      <p>In a competitive market, branding is key. Focus on clean, attractive packaging and emphasize purity. Build a robust distribution network by partnering with local distributors, retailers, and online delivery platforms. In 2026, leveraging digital marketing and local SEO is crucial for visibility.</p>
+
+      <h2>6. Quality Control and Maintenance</h2>
+      <p>Maintain a well-equipped in-house laboratory for daily testing of water samples as per IS:14543 standards. Regular maintenance of your plant ensures its longevity and prevents production downtime.</p>
+
+      <p>At Krupashindu, we specialize in providing turnkey solutions for mineral water plants, from ISI consultancy to machine installation. Contact us today to turn your entrepreneurial vision into a reality.</p>
+    `,
+    date: "April 6, 2026",
+    author: "Business Consulting Team",
+    readTime: "10 min read",
+    category: "Guides",
+    image: "https://images.unsplash.com/photo-1548678967-f1fc5d33904e?auto=format&fit=crop&q=80&w=800"
+  },
+  {
     id: 'future-of-mineral-water-2026',
     title: "The Future of Mineral Water Plants in 2026",
     excerpt: "Exploring the latest trends in automation, sustainable packaging, and energy-efficient water purification technologies.",
