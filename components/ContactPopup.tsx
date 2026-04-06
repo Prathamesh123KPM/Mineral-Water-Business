@@ -11,6 +11,7 @@ const ContactPopup: React.FC = () => {
         company: '',
         email: '',
         phone: '',
+        country: '',
         requirements: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,7 +25,7 @@ const ContactPopup: React.FC = () => {
                 setIsVisible(true);
                 setShowCount(prev => prev + 1);
             }
-        }, 1000); // Show after 1 second initially
+        }, 35000); // Show after 15 seconds initially
 
         return () => clearTimeout(initialTimer);
     }, []);
@@ -38,7 +39,7 @@ const ContactPopup: React.FC = () => {
                     setIsVisible(true);
                     setShowCount((prev) => prev + 1);
                 }
-            }, 10000); // 10 seconds interval
+            }, 30000); // 10 seconds interval
         }
 
         return () => {
@@ -65,21 +66,22 @@ const ContactPopup: React.FC = () => {
 
         try {
             await emailjs.send(
-                'service_y5vqpvq',
-                'template_edzdbed',
+                'service_cyr60lp',
+                'template_zpz4obb',
                 {
                     from_name: formData.name,
                     company: formData.company,
                     from_email: formData.email,
                     phone: formData.phone,
+                    country: formData.country,
                     message: formData.requirements,
                     to_email: 'krupashinduce@gmail.com'
                 },
-                'V0g1zF6hq8jPrcste'
+                'BTJk73cCsqV7C7SVl'
             );
             setSubmitStatus('success');
             setIsFormSubmitted(true);
-            setFormData({ name: '', company: '', email: '', phone: '', requirements: '' });
+            setFormData({ name: '', company: '', email: '', phone: '', country: '', requirements: '' });
             setTimeout(() => setIsVisible(false), 3000); // Close after 3 seconds on success
         } catch (error) {
             console.error('Email error:', error);
@@ -166,19 +168,20 @@ const ContactPopup: React.FC = () => {
                                     </div>
                                 </div>
 
+                                <div className="space-y-1">
+                                    <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Email *</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all text-sm font-medium"
+                                        placeholder="Email"
+                                    />
+                                </div>
+
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div className="space-y-1">
-                                        <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Email *</label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            value={formData.email}
-                                            onChange={handleChange}
-                                            required
-                                            className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all text-sm font-medium"
-                                            placeholder="Email"
-                                        />
-                                    </div>
                                     <div className="space-y-1">
                                         <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Phone</label>
                                         <input
@@ -188,6 +191,17 @@ const ContactPopup: React.FC = () => {
                                             onChange={handleChange}
                                             className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all text-sm font-medium"
                                             placeholder="Phone"
+                                        />
+                                    </div>
+                                    <div className="space-y-1">
+                                        <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Country</label>
+                                        <input
+                                            type="text"
+                                            name="country"
+                                            value={formData.country}
+                                            onChange={handleChange}
+                                            className="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all text-sm font-medium"
+                                            placeholder="Country"
                                         />
                                     </div>
                                 </div>

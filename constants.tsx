@@ -12,31 +12,32 @@ import {
   Beer,
   Cpu
 } from 'lucide-react';
-import { Product, Testimonial, Service, Project } from './types';
+import { Product, Testimonial, Service, Project, BlogPost } from './types';
 
-import packageImg from './Packaged Drinking Water Plant.png';
-import industrial from './industrial.png';
-import glass from './Glass bottling plant.png';
-import natural from './natural.png';
-import carbonated from './Soft D P.jpeg';
-import juice from './Fruit J P.jpeg';
-import machine from './Fully automatic labeling machine.png';
-import shrink from './shrink.png';
-import shrinkA from './Automatic shrink wraping machine.jpeg';
-import bottle from './Mineral water plant.png';
-import ro from './RO Plant.jpeg';
-import csdCarbonator from './Carbonator.jpeg';
-import juiceFilling from './Fruit juice filling machine.jpeg';
-import pet from './Semi automatic blowing machine.jpeg';
-import petA from './Automatic blowing machine.jpeg';
-import process from './process.png';
-import plant from './waterplant.png';
-import md from "../MD.png"
-import mh from "../MH.png"
+import packagedDrinkingWaterImg from './package.webp';
+import industrialImg from './industrial.webp';
+import glassBottlingImg from './Glass bottling plant.webp';
+import naturalMineralImg from './natural.webp';
+import softDrinkPlantImg from './softdrink.webp';
+import fruitJuicePlantImg from './fruitjuiceplant.webp';
+import labelingMachineImg from './machine.webp';
+import shrinkWrappingImg from './shrink.webp';
+import autoShrinkWrappingImg from './Automatic shrink wraping machine.webp';
+import bottledWaterImg from './bottleimg.webp';
+import roPlantImg from './ro.webp';
+import csdCarbonatorImg from './Carbonator.webp';
+import juiceFillingImg from './Fruit juice filling machine.webp';
+import petBlowingImg from './pet.webp';
+import autoPetBlowingImg from './Automatic blowing machine.webp';
+import processingEquipImg from './process.webp';
+import mineralWaterPlantImg from './waterplant.webp';
+import mhImg from "./MH.webp"
+import mdImg from "./MD.webp"
+import fullyAutoFillingImg from "./Fully Af.webp"
 
 export const PRODUCTS: Product[] = [
   {
-    id: '1',
+    id: 'mineral-water-plant',
     name: 'Mineral Water Plant',
     category: '',
     description: 'Complete treatment and bottling solutions for safe, compliant drinking water production. Get the best mineral water bottling plant price and project report for your small scale mineral water plant.',
@@ -47,17 +48,14 @@ export const PRODUCTS: Product[] = [
       
       <p>We provide comprehensive support, including a detailed <strong>mineral water project report</strong>, ISI/BIS compliance guidance, and assistance with plant layout and installation. Our turnkey solutions cover everything from water treatment to bottling and packaging, offering you a hassle-free experience in establishing your water business. Invest in our state-of-the-art technology to produce premium quality mineral water that meets international standards.</p>
     `,
-    image: plant,
+    image: mineralWaterPlantImg,
     images: [
-      plant,
-      // 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800',
-      // 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
-      // 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800'
+      mineralWaterPlantImg,
     ],
     specs: ['ISI/BIS Compliance', 'SS 316 Piping', 'Fully Automatic Operation']
   },
   {
-    id: '8',
+    id: 'fruit-juice-plant',
     name: 'Fruit Juice Plant',
     category: '',
     description: 'Turnkey processing and packaging solutions for pulp and non-pulp fruit juices.',
@@ -68,11 +66,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Automation is at the heart of our design, with PLC-controlled operations ensuring consistent product quality and operational efficiency. The robust construction using <strong>SS 304/316 grade stainless steel</strong> ensures hygiene and easy cleaning, complying with stringent food safety regulations. Partner with us to set up a world-class fruit juice processing facility that delivers fresh, high-quality juice to the market.</p>
     `,
-    image: juice,
+    image: fruitJuicePlantImg,
     specs: ['Hot Fill Technology', 'Pasteurization System', 'Aseptic Filling Options']
   },
   {
-    id: '3',
+    id: 'soft-drink-plant',
     name: 'Soft Drink Plant',
     category: '',
     description: 'Complete CSD lines with high-pressure carbonation and precision filling. Ideal for starting a business like Coca Cola with optimized manufacturing costs.',
@@ -83,11 +81,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Built with high-quality components and reducing energy consumption, our CSD lines offer a robust return on investment. Whether you are launching a new local brand or expanding an existing product line, our <strong>Soft Drink Plants</strong> provide the reliability and scalability needed to succeed in the competitive beverage industry.</p>
     `,
-    image: carbonated,
+    image: softDrinkPlantImg,
     specs: ['High-Pressure Carbonation', 'Counter-Pressure Filling', 'Flavor Dosing Unit']
   },
   {
-    id: '2',
+    id: 'bottled-water-plant',
     name: 'Bottled Water Plant',
     category: 'Turnkey Systems',
     description: 'High-efficiency systems for hygienic bottling and packaging of purified water. Discover competitive mineral water machine price in India and expert water bottle plant machinery.',
@@ -98,16 +96,14 @@ export const PRODUCTS: Product[] = [
       
       <p>Beyond machinery, we provide expert guidance on setting up a successful water bottle plant. From selecting the right <strong>water bottle plant machinery</strong> to optimizing the layout for workflow efficiency, our team supports you at every step. Choose our solutions for a reliable, profitable, and future-ready bottled water business.</p>
     `,
-    image: bottle,
+    image: bottledWaterImg,
     images: [
-      bottle,
-      // 'https://images.unsplash.com/photo-1536582527263-d1433f446059?auto=format&fit=crop&q=80&w=800',
-      // 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800'
+      bottledWaterImg,
     ],
     specs: ['2000 to 20000 BPH', 'Integrated Rinsing/Filling/Capping', 'Energy Efficient']
   },
   {
-    id: '4',
+    id: 'industrial-alkaline-water',
     name: 'Industrial Alkaline Water',
     category: 'Water Treatment',
     description: 'Advanced ionization systems for producing antioxidant-rich alkaline water.',
@@ -118,14 +114,14 @@ export const PRODUCTS: Product[] = [
       
       <p>With increasing consumer awareness about health, alkaline water is a high-value product category. Our robust equipment is built for continuous operation and easy maintenance, providing a reliable platform for producing premium functional water brands.</p>
     `,
-    image: industrial,
+    image: industrialImg,
     images: [
-      industrial
+      industrialImg
     ],
     specs: ['pH Level 8.5-9.5', 'Electrolysis Technology', 'Antioxidant Rich Output']
   },
   {
-    id: '5',
+    id: 'glass-bottling-plant',
     name: 'Glass Bottling Plant',
     category: 'Bottling & Filling',
     description: 'Premium bottling equipment for still and sparkling water in glass containers.',
@@ -136,11 +132,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Our glass bottling solutions are not just about aesthetics; they are built for performance. Efficient cleaning systems, robust conveyors, and stringent quality control sensors ensure a smooth production flow. Investing in a glass bottling line positions your product in the premium segment, offering higher margins and distinct market differentiation.</p>
     `,
-    image: glass,
+    image: glassBottlingImg,
     specs: ['Gentle Bottle Handling', 'Vacuum Filling', 'Crown/Screw Capping']
   },
   {
-    id: '14',
+    id: 'csd-carbonator',
     name: 'CSD Carbonator',
     category: 'Turnkey Systems',
     description: 'High-efficiency carbonation system for precise CO2 injection in beverages.',
@@ -151,11 +147,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Compact and easy to integrate, our CSD Carbonators are built with sanitary stainless steel construction for hygiene and durability. Precise control over carbonation levels allows manufacturers to fine-tune their products, ensuring they meet the exact specifications of their brand standards.</p>
     `,
-    image: csdCarbonator,
+    image: csdCarbonatorImg,
     specs: ['Precise CO2 Control', 'Continuous Operation', 'Energy Efficient']
   },
   {
-    id: '15',
+    id: 'fruit-juice-filling-machine',
     name: 'Fruit Juice Filling Machine',
     category: 'Turnkey Systems',
     description: 'Advanced filling machine designed specifically for fruit juices.',
@@ -164,13 +160,13 @@ export const PRODUCTS: Product[] = [
       
       <p>Hygiene is paramount in juice production. Our machines feature an open design for <strong>easy cleaning</strong> and can be integrated with automated CIP (Clean-in-Place) systems. This ensures thorough sanitization between batches, preventing cross-contamination and spoilage. The high-speed operation ensures you can meet market demand without bottlenecks in your packaging line.</p>
       
-      <p>With quick changeover parts, the machine can easily adapt to different bottle sizes and formats. User-friendly cleaning interfaces and robust construction make our Fruit Juice Filling Machine a reliable asset for any beverage manufacturer looking to scale up production efficiently.</p>
+      <p>With quick changeoaver parts, the machine can easily adapt to different bottle sizes and formats. User-friendly cleaning interfaces and robust construction make our Fruit Juice Filling Machine a reliable asset for any beverage manufacturer looking to scale up production efficiently.</p>
     `,
-    image: juiceFilling,
+    image: juiceFillingImg,
     specs: ['Hot Fill Options', 'High Speed', 'Easy Cleaning']
   },
   {
-    id: '16',
+    id: 'fully-automatic-filling-machine',
     name: 'Fully Automatic Filling Machine',
     category: 'Turnkey Systems',
     description: 'State-of-the-art automatic filling machine for various liquid products.',
@@ -181,11 +177,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Constructed with high-grade stainless steel and equipped with safety interlocks, this filling machine is built for durability and safe operation. It integrates seamlessly into existing production lines, providing a robust solution for automating your liquid packaging process.</p>
     `,
-    image: bottle,
+    image: fullyAutoFillingImg,
     specs: ['High Accuracy', 'Multiple Formats', 'PLC Control']
   },
   {
-    id: '6',
+    id: 'natural-mineral-water-plants',
     name: 'Natural Mineral Water Plants',
     category: 'Turnkey Systems',
     description: 'Specialized systems that preserve the natural mineral content of source water. Comprehensive mineral water plant project report and ISI mark registration guidance included.',
@@ -196,11 +192,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Start a premium water brand that stands out for its natural quality. Our holistic approach covers everything from hydro-geological surveys to the final bottle design, helping you deliver a product that consumers trust and prefer.</p>
     `,
-    image: natural,
+    image: naturalMineralImg,
     specs: ['Source Protection', 'Iron/Manganese Removal', 'Chemical-free Treatment']
   },
   {
-    id: '7',
+    id: 'packaged-drinking-water-plant',
     name: 'Packaged Drinking Water Plant',
     category: 'Turnkey Systems',
     description: 'Fully automatic plants designed for high-volume packaged drinking water production. Learn how to start a Bisleri water business with our turnkey drinking water projects.',
@@ -211,15 +207,14 @@ export const PRODUCTS: Product[] = [
       
       <p>Reliability is key in high-volume production. Our plants feature robust components and advanced automation to minimize downtime and maintenance costs. Join the league of successful water entrepreneurs with our proven technology and comprehensive project support.</p>
     `,
-    image: packageImg,
+    image: packagedDrinkingWaterImg,
     images: [
-      packageImg,
-      // 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800'
+      packagedDrinkingWaterImg,
     ],
     specs: ['Multi-stage Filtration', 'Ozone Disinfection', 'Compact Layout']
   },
   {
-    id: '9',
+    id: 'fully-automatic-labeling-machine',
     name: 'Fully Automatic Labeling Machine',
     category: 'Packaging & Labeling',
     description: 'Versatile end-of-line solutions including case packers and robotic palletizers. Advanced water packets machine and mineral water packing machine options available.',
@@ -230,11 +225,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Consistent, wrinkle-free labeling enhances shelf appeal and brand perception. Our machines feature easy adjustments for different bottle sizes and label types, offering the flexibility required in today's dynamic market.</p>
     `,
-    image: machine,
+    image: labelingMachineImg,
     specs: ['Carton Erector', 'Robotic Palletizing', 'High-Speed Operation']
   },
   {
-    id: '10',
+    id: 'semi-automatic-shrink-wrapping-machine',
     name: 'Semi-Automatic Shrink Wrapping Machine',
     category: 'Packaging & Labeling',
     description: 'Precision thermal tunnel machines for secure bottle and pack wrapping.',
@@ -245,11 +240,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Ideal for small to medium-scale operations, these machines provide professional packaging quality with low maintenance requirements. They are compatible with various pack configurations, adding versatility to your final packaging line.</p>
     `,
-    image: shrink,
+    image: shrinkWrappingImg,
     specs: ['LDPE Film Compatible', 'Energy Saving Heaters', 'Cooling Fan System']
   },
   {
-    id: '11',
+    id: 'industrial-ro-plant',
     name: 'Industrial RO Plant',
     category: 'Water Treatment',
     description: 'High-recovery reverse osmosis systems for effective industrial water purification. Expert RO plant solutions, RO setup, and water softener plant manufacturing.',
@@ -260,11 +255,11 @@ export const PRODUCTS: Product[] = [
       
       <p>In addition to RO, we manufacture comprehensive <strong>water softener plants</strong> to tackle hard water issues, protecting your downstream equipment from scaling. Trust our expert engineering for reliable, continuous supply of purified water for your industrial processes.</p>
     `,
-    image: ro,
+    image: roPlantImg,
     specs: ['High Recovery Rate', 'FRP/SS Pressure Vessels', 'TDS Controller']
   },
   {
-    id: '12',
+    id: 'fully-automatic-pet-blow-molding-machine',
     name: 'Fully Automatic Pet Blow Molding Machine',
     category: 'Manufacturing',
     description: 'High-speed servo-driven equipment for producing quality PET bottles. Efficient water bottle manufacturing cost with state-of-the-art water factory machines.',
@@ -275,11 +270,11 @@ export const PRODUCTS: Product[] = [
       
       <p>From 50ml pharma bottles to large 20L jars, our state-of-the-art <strong>water factory machines</strong> deliver crystal clear, defect-free PET bottles. Invest in backward integration to enhance your profit margins and production flexibility.</p>
     `,
-    image: petA,
+    image: autoPetBlowingImg,
     specs: ['Servo Driven', 'Infrared Heating', 'Quick Mold Change']
   },
   {
-    id: '13',
+    id: 'processing-equipment',
     name: 'Processing Equipment',
     category: 'Ancillary Equipment',
     description: 'Essential ancillary equipment including blending tanks and automated CIP systems.',
@@ -290,11 +285,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Whether you are mixing syrups for soft drinks or storing treated water, our robust ancillary equipment forms the reliable backbone of your production facility. Engineered for longevity and ease of use, they are an essential investment for quality-focused manufacturers.</p>
     `,
-    image: process,
+    image: processingEquipImg,
     specs: ['SS 304/316L Grade', 'Automated CIP', 'Temperature Control']
   },
   {
-    id: '17',
+    id: 'fully-automatic-shrink-wrapping-machine',
     name: 'Fully Automatic Shrink Wrapping Machine',
     category: 'Packaging & Labeling',
     description: 'High-speed shrink wrapping for secure and aesthetic packaging.',
@@ -305,11 +300,11 @@ export const PRODUCTS: Product[] = [
       
       <p>Reliability meets speed in this advanced packaging solution. By automating the final packaging step, you significantly reduce labor costs and increase the overall efficiency of your production line, ensuring your products reach the market faster and in perfect condition.</p>
     `,
-    image: shrinkA,
+    image: autoShrinkWrappingImg,
     specs: ['Adjustable Temperature', 'Automatic Film Feeding', 'Compact Design']
   },
   {
-    id: '18',
+    id: 'semi-automatic-pet-blowing-machine',
     name: 'Semi Automatic Pet Blowing Machine',
     category: 'Manufacturing',
     description: 'Reliable and cost-effective semi-automatic machine for PET bottle production.',
@@ -320,7 +315,7 @@ export const PRODUCTS: Product[] = [
       
       <p>For businesses looking to produce their own bottles on a budget, this machine offers a reliable and scalable path. It handles a wide range of preform sizes and mold shapes, giving you the flexibility to launch various bottle designs as your brand grows.</p>
     `,
-    image: pet,
+    image: petBlowingImg,
     specs: ['Easy Operation', 'Low Maintenance', 'Durable Components']
   }
 ];
@@ -351,15 +346,15 @@ export const TEAM = [
     id: '1',
     name: 'Mr. Ram Gavhane',
     role: 'Managing Director',
-    image: md,
-    bio: "Ram Gavhane is a visionary Managing Director dedicated to strategic growth, innovation, and driving long-term success."
+    image: mdImg,
+    bio: "RAM GAVHANE IS A VISIONARY MANAGING DIRECTOR DEDICATED TO STRATEGIC GROWTH, INNOVATION, AND DRIVING LONG-TERM SUCCESS."
   },
   {
     id: '2',
     name: 'Mr. Mohit Khatwani',
     role: 'Marketing Head',
-    image: mh,
-    bio: 'Mohit Khatwani is a Marketing Head driving digital growth, brand visibility, and lead generation in real estate and hospitality.'
+    image: mhImg,
+    bio: "MOHIT KHATWANI - PROJECT CONSULTANT FOR BEVERAGES INDUSTRY ( WATER / SOFT DRINK/ JUICE) RTD READY TO DRINK. TRUNKEY BASED END TO END SOLUTION"
   }
 ];
 
@@ -403,4 +398,101 @@ export const CLIENT_LOGOS = [
   "RS Food (Jharkhand)",
   "Blue Brook (Dominican Republic)",
   "Abu Yousaf (Oman)"
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'future-of-mineral-water-2026',
+    title: "The Future of Mineral Water Plants in 2026",
+    excerpt: "Exploring the latest trends in automation, sustainable packaging, and energy-efficient water purification technologies.",
+    content: `
+      <p>The mineral water industry is undergoing a massive transformation as we head into 2026. With increasing environmental concerns and rising operational costs, manufacturers are turning to smarter, greener, and more efficient technologies. At Krupashindu, we are leading this charge by integrating cutting-edge solutions into our turnkey plants.</p>
+      
+      <h2>1. Hyper-Automation & AI-Driven Process Control</h2>
+      <p>Gone are the days of manual monitoring. Modern plants now utilize AI-driven sensors to monitor water quality in real-time. These systems can automatically adjust filtration parameters to ensure consistent purity, even if the source water quality fluctuates. Predictive maintenance is another game-changer—our machines can now alert operators before a component fails, reducing downtime by up to 30%.</p>
+      
+      <p>In 2026, we've introduced the "Krupa-Smart" control center. This central nervous system uses machine learning algorithms to analyze historical production data, optimizing throughput while minimizing detergent use during CIP (Clean-In-Place) cycles. This not only saves money but also significantly reduces the chemical footprint of the plant.</p>
+
+      <h2>2. Sustainable Packaging & The rPET Revolution</h2>
+      <p>Sustainability is no longer optional. We are seeing a significant shift towards rPET (recycled PET) and ultra-lightweight bottle designs that use 20% less plastic without compromising strength. Additionally, biodegradable labeling materials and water-soluble adhesives are becoming industry standards.</p>
+      
+      <p>Our research team has perfected a new "Nano-Rib" bottle geometry. This design increases the structural integrity of the bottle by 15% using the same amount of material, allowing for faster conveyor speeds and reduced breakage during transportation. We are also collaborating with vendors to provide specialized equipment for handling biodegradable polymers, ensuring our clients are ready for the next wave of plastic regulations.</p>
+
+      <h2>3. High-Flux Membranes & Energy-Recovery Turbines</h2>
+      <p>Reverse Osmosis (RO) has traditionally been energy-intensive. However, new energy-recovery turbines and high-flux membranes are drastically reducing the power required per liter of purified water. Our latest RO setups are designed to consume 15-20% less electricity compared to 2024 models.</p>
+      
+      <p>The implementation of "Low-Fouling" membrane technology means that chemical cleaning intervals can be doubled. This extends membrane life and reduces the volume of wastewater generated by 12%. By recycling the 'reject' water for secondary uses like garden irrigation or industrial cleaning within the facility, our plants are achieving record-breaking water recovery ratios.</p>
+
+      <h2>4. Digital Twins & Virtual Commissioning</h2>
+      <p>One of the most exciting developments in 2026 is the use of 'Digital Twins'. Before we even ship a machine to your location, we create a 1:1 digital representation. This allows us to simulate the entire production floor, identifying potential bottlenecks in the layout and training your staff in a virtual environment. This reduces physical installation time drastically and ensures that the plant hits its rated efficiency from the very first hour of operation.</p>
+
+      <p>Investing in these technologies today ensures that your beverage business remains competitive and compliant with future regulations. Contact us to learn how we can modernize your existing plant or help you start a future-proof new facility.</p>
+    `,
+    date: "March 15, 2026",
+    author: "Admin",
+    readTime: "8 min read",
+    category: "Industry Trends",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: 'benefits-of-turnkey-solutions',
+    title: "Benefits of Turnkey Solutions for Beverage Businesses",
+    excerpt: "Why custom-engineered, end-to-end production lines are the smartest investment for scaling your beverage brand.",
+    content: `
+      <p>Starting or expanding a beverage production facility can be a logistical nightmare. Managing multiple vendors for water treatment, bottling, labeling, and packaging often leads to compatibility issues and project delays. This is where <strong>Turnkey Solutions</strong> provide an overwhelming advantage.</p>
+      
+      <h2>1. The Power of a Single Vision</h2>
+      <p>With a turnkey provider like Krupashindu, you deal with a single entity for everything from initial plant layout to final commissioning. This eliminates the 'blame game' between vendors and ensures a cohesive project timeline. When one team designs the purification unit, the filling line, and the end-of-line packaging, every component is 'aware' of the others' technical specifications.</p>
+      
+      <p>This holistic approach allows for "Line-Level Efficiency". Instead of optimizing individual machines, we optimize the entire flow of the bottle. This means fewer micro-stops, less accumulation pressure, and a much smoother production rhythm that translates to higher daily output.</p>
+
+      <h2>2. Guaranteed Technical Compatibility</h2>
+      <p>When machines are designed and built to work together, they do. Our turnkey lines are synchronized at the engineering level, ensuring that the output rate of your treatment plant perfectly matches the input requirements of your filling and labeling machines.</p>
+      
+      <p>We use unified control systems (SCADA) across the entire line. This means your operator has one dashboard to monitor every stage of production. If the filler slows down due to a labeler jam, the RO system automatically throttles its output to prevent tank overflow or excessive pressure build-up. This "Self-Aware Line" capability is nearly impossible to achieve when mixing and matching different brands of equipment.</p>
+
+      <h2>3. Accelerated Project Lifecycles</h2>
+      <p>Because we manage the entire workflow, we can overlap phases of manufacturing and installation. While the treatment plant is being fabricated in our workshop, our civil engineers are already helping you prep the site foundations. A typical turnkey setup can be operational 25% faster than a multi-vendor project, getting your product to market and generating revenue months earlier.</p>
+      
+      <h2>4. Lower Total Cost of Ownership (TCO)</h2>
+      <p>Initial purchase price is only one part of the equation. Turnkey lines are designed to minimize spare parts' variety—using common motors, sensors, and electrical components throughout the line. This means you need to stock fewer spares, saving you thousands in working capital. Additionally, our comprehensive training programs ensure that your team can handle most maintenance tasks themselves, reducing your reliance on expensive outside technicians.</p>
+      
+      <h2>5. Peace of Mind Post-Installation</h2>
+      <p>When you have a technical issue, you only need to call one number. We provide comprehensive training for your operators on the entire line, ensuring your team is fully equipped to run the plant at peak efficiency from day one. Our 24/7 service desk tracks every machine in your line, and with remote monitoring, we can often diagnose and fix issues before you even notice them.</p>
+
+      <p>Choose the smart path to growth. Let us handle the engineering complexities while you focus on building your brand and capturing market share.</p>
+    `,
+    date: "March 10, 2026",
+    author: "Technical Team",
+    readTime: "7 min read",
+    category: "Business Strategy",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    id: 'quality-assurance-iso-standards',
+    title: "Quality Assurance: ISO Standards in Beverage Production",
+    excerpt: "A comprehensive guide to maintaining international quality standards and ensuring consumer safety in every bottle.",
+    content: `
+      <p>In the beverage industry, trust is everything. A single batch of contaminated product can destroy a brand's reputation overnight. This is why adhering to <strong>ISO 9001:2015</strong> and other international safety standards is crucial for every manufacturer.</p>
+      
+      <h2>Standard Operating Procedures (SOPs)</h2>
+      <p>Quality assurance starts with documentation. We help our clients implement rigorous SOPs for every stage of production—from raw water testing to final bottle inspection. Consistency is the hallmark of a world-class beverage brand.</p>
+      
+      <h2>Hygienic Design</h2>
+      <p>Our machinery is built using food-grade SS 316L stainless steel and features 'dead-leg' free piping designs to prevent bacterial growth. Automated CIP (Clean-in-Place) systems ensure that the entire production path is sanitized thoroughly between production runs.</p>
+      
+      <h2>Regulatory Compliance</h2>
+      <p>Navigating BIS/ISI standards in India or FDA requirements globally can be challenging. Our consulting team provides end-to-end support for certification, ensuring that your plant layout and processes meet every legal requirement for food safety.</p>
+      
+      <h2>Batch Tracking</h2>
+      <p>Modern QA involves the ability to trace every bottle back to its production time and batch of ingredients. Our integrated software solutions allow for seamless batch tracking, providing you with full visibility and control over your supply chain.</p>
+      
+      <p>Quality isn't an act; it's a habit. Build your business on a foundation of excellence with our certified engineering solutions.</p>
+    `,
+    date: "March 5, 2026",
+    author: "QA Department",
+    readTime: "6 min read",
+    category: "Compliance",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800"
+  }
 ];

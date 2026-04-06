@@ -30,3 +30,15 @@ export interface Project {
   category: string;
   image: string;
 }
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  date: string;
+  author: string;
+  readTime: string;
+  category: string;
+  image: string;
+}

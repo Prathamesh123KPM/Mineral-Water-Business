@@ -12,20 +12,19 @@ const Footer: React.FC = () => {
           {/* Company Bio */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <img src={logo} alt="Krupashindu" className="h-14 w-auto object-contain bg-white rounded-lg p-1" />
+              <img src={logo} alt="Krupashindu Turnkey Beverage and Mineral Water Solutions Logo" className="h-14 w-auto object-contain bg-white rounded-lg p-1" />
               <span className="text-xl font-bold text-white">Krupashindu</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-400">
               Leading manufacturer and exporter of mineral water plants and beverage machinery since 2005. Providing global turnkey solutions for modern production.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-blue-400 transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="hover:text-blue-400 transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-blue-400 transition-colors"><Linkedin size={20} /></a>
+              <a href="https://www.facebook.com/krupashindu.mineralla/" className="hover:text-blue-400 transition-colors"><Facebook size={20} /></a>
+              <a href="https://www.instagram.com/krupashindu_/" className="hover:text-blue-400 transition-colors"><Instagram size={20} /></a>
+              <a href="https://in.linkedin.com/in/krupashindu" className="hover:text-blue-400 transition-colors"><Linkedin size={20} /></a>
               <a href="https://www.youtube.com/@KrupashinduConsultingEngineer" className="hover:text-blue-400 transition-colors"><Youtube size={20} /></a>
             </div>
           </div>
-
           {/* Quick Links */}
           <div>
             <h3 className="text-white font-bold mb-6">Quick Links</h3>

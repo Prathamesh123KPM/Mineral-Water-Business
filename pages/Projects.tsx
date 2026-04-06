@@ -19,9 +19,9 @@ const Projects: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROJECTS.map((project) => (
               <div key={project.id} className="group relative rounded-3xl overflow-hidden shadow-lg h-96">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
+                <img
+                  src={project.image}
+                  alt={`${project.title} - Mineral Water Plant Installation Project`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
@@ -34,13 +34,13 @@ const Projects: React.FC = () => {
             {/* Extended gallery placeholders */}
             {[1, 2, 3].map((i) => (
               <div key={`extra-${i}`} className="group relative rounded-3xl overflow-hidden shadow-lg h-96 bg-gray-100">
-                <img 
-                  src={`https://picsum.photos/seed/${i+10}/800/1200`} 
-                  alt="Gallery Item" 
+                <img
+                  src={`https://picsum.photos/seed/${i + 10}/800/1200`}
+                  alt="Krupashindu Turnkey Plant Installation Project Gallery"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-blue-900/40 opacity-0 group-hover:opacity-100 transition-opacity">
-                   <p className="text-white font-bold border-2 border-white px-6 py-2 rounded-full uppercase tracking-widest text-xs">View Project</p>
+                  <p className="text-white font-bold border-2 border-white px-6 py-2 rounded-full uppercase tracking-widest text-xs">View Project</p>
                 </div>
               </div>
             ))}

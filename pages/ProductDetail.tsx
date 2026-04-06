@@ -59,8 +59,10 @@ const ProductDetail: React.FC = () => {
                 <div className="absolute inset-0 bg-slate-100 animate-pulse -z-10"></div>
                 <img
                   src={images[activeImageIndex]}
-                  alt={`${product.name} view ${activeImageIndex + 1}`}
+                  alt={`${product.name} - High-Efficiency Machine View ${activeImageIndex + 1}`}
                   className="w-full h-full object-cover transition-all duration-500"
+                  loading="eager"
+                  fetchPriority="high"
                 />
 
                 {/* Navigation Arrows */}
@@ -95,11 +97,11 @@ const ProductDetail: React.FC = () => {
                       key={idx}
                       onClick={() => setActiveImageIndex(idx)}
                       className={`relative w-24 h-24 flex-shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${activeImageIndex === idx
-                          ? 'ring-4 ring-sky-500 ring-offset-2 opacity-100 scale-105'
-                          : 'opacity-60 hover:opacity-100 hover:scale-105'
+                        ? 'ring-4 ring-sky-500 ring-offset-2 opacity-100 scale-105'
+                        : 'opacity-60 hover:opacity-100 hover:scale-105'
                         }`}
                     >
-                      <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
+                      <img src={img} alt={`${product.name} Image Thumbnail ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
                     </button>
                   ))}
                 </div>
@@ -113,16 +115,17 @@ const ProductDetail: React.FC = () => {
               <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] mb-6">
                 {product.name}
               </h1>
-              <p className="text-lg text-slate-600 font-medium leading-relaxed">
-                {product.longDescription ? (
-                  <div
-                    className="prose prose-slate prose-lg max-w-none text-slate-600 font-medium leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: product.longDescription }}
-                  />
-                ) : (
-                  product.description
-                )}
-              </p>
+            </div>
+
+            <div className="text-lg text-slate-600 font-medium leading-relaxed">
+              {product.longDescription ? (
+                <div
+                  className="prose prose-slate prose-lg max-w-none text-slate-600 font-medium leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: product.longDescription }}
+                />
+              ) : (
+                <p>{product.description}</p>
+              )}
             </div>
 
             <div className="p-8 rounded-[2rem] bg-sky-50 border border-sky-100">

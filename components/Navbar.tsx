@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
     { name: 'About', path: '/about' },
     { name: 'Products', path: '/products' },
     { name: 'Services', path: '/services' },
+    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -32,10 +33,10 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-3 group">
-              <img src={logo} alt="Krupashindu" className="h-12 w-auto object-contain" />
+              <img src={logo} alt="Krupashindu Mineral Water Plant and Machinery Manufacturer Logo" className="h-12 w-auto object-contain" />
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold text-slate-800 leading-none tracking-tight group-hover:text-sky-700 transition-colors">Krupashindu</span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-sky-500 font-bold mt-0.5">Mineral Water Business</span>
+                {/* <span className="text-[10px] uppercase tracking-[0.2em] text-sky-500 font-bold mt-0.5">Plant & Machinery</span> */}
               </div>
             </Link>
           </div>

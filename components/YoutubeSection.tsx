@@ -5,10 +5,10 @@ const YoutubeSection: React.FC = () => {
     // Array of video IDs - currently using placeholder duplicates
     // User can replace these IDs with unique videos
     const VIDEOS = [
-        { id: "Rhf1YL6-NBA", title: "Advanced Water Treatment" },
-        { id: "ZV8jklPgjsA", title: "High-Speed Bottling Line" },
-        { id: "Iu4wXtPgueI", title: "Quality Control Systems" },
-        { id: "VQy6xMufrVU", title: "Automated Packaging" }
+        { id: "Rhf1YL6-NBA", title: "Mineral Water Bussiness" },
+        { id: "OtFAZRQ32pU", title: "Fruit Juice Plant" },
+        { id: "Iu4wXtPgueI", title: "Low Budget Mineral Water Plant" },
+        { id: "VQy6xMufrVU", title: "Natural/Mineral Water Plant" }
     ];
 
     return (

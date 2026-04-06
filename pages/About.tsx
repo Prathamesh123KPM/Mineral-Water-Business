@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Target, Eye, ShieldCheck, Award, Zap } from 'lucide-react';
-import global from "../global.png"
-import plant from "../plant.png"
+import global from "../global.webp"
+import plant from "../plant.webp"
 import { TEAM } from '../constants';
 
 
@@ -18,7 +18,7 @@ const About: React.FC = () => {
             Legacy of <span className="text-water-gradient">Engineering</span> Excellence.
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
-            Mineral Water Business by Krupashindu has been the cornerstone of industrial water treatment and beverage production since 2005.
+            Mineral Water, Soft Drink, Fruit Juice Plant & Machinery Manufacturing by Krupashindu has been the cornerstone of industrial water treatment and beverage production since 2005.
           </p>
         </div>
       </section>
@@ -32,8 +32,9 @@ const About: React.FC = () => {
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-sky-900/10">
                 <img
                   src={plant}
-                  alt="Engineering Team"
+                  alt="Krupashindu Mineral Water Plant Engineering and Operations Team"
                   className="w-full h-auto"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -86,6 +87,7 @@ const About: React.FC = () => {
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 filter grayscale group-hover:grayscale-0"
+                      loading="lazy"
                     />
                     <div className="absolute bottom-6 left-6 z-20 text-white">
                       <h3 className="text-2xl font-black leading-tight mb-1">{member.name}</h3>
@@ -135,8 +137,9 @@ const About: React.FC = () => {
           <div className="relative rounded-[4rem] overflow-hidden shadow-2xl shadow-sky-900/20 border-8 border-white">
             <img
               src={global}
-              alt="Global Reach"
+              alt="Krupashindu Global Export Destinations Map for Water Plants"
               className="w-full h-auto opacity-90"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-sky-900/50 to-transparent"></div>
           </div>

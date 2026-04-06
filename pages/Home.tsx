@@ -19,12 +19,15 @@ import {
   Settings
 } from 'lucide-react';
 import { CLIENT_LOGOS, TESTIMONIALS, PRODUCTS, TEAM } from '../constants';
-import Photo from '../water.png';
-import home from "../Homepage.png"
-import machines from "../Engineering for efficincy.png"
-import ImageCarousel from '../components/ImageCarousel';
-import YoutubeSection from '../components/YoutubeSection';
+import Photo from '../water.webp';
+import home from "../Homepage.webp"
+import machines from "../Engineering for efficincy.webp"
+const ImageCarousel = React.lazy(() => import('../components/ImageCarousel'));
+const YoutubeSection = React.lazy(() => import('../components/YoutubeSection'));
 import iso from '../iso.png';
+import cert1 from '../certificate (1).webp';
+import cert2 from '../certificate (2).webp';
+import cert3 from '../certificate (3).webp';
 
 const Home: React.FC = () => {
   return (
@@ -57,7 +60,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-6 space-y-10 relative z-10">
               <div className="inline-flex items-center space-x-3 px-4 py-2 rounded-full glass-water border-sky-100 shadow-sm">
-                <img src={iso} alt="ISO" className="w-10 h-10 object-contain" />
+                <img src={iso} alt="ISO 9001:2015 Certified Manufacturing Water Plant" className="w-10 h-10 object-contain" loading="lazy" />
                 <span className="text-xs font-bold uppercase tracking-widest text-sky-700">ISO 9001:2015 Certified Engineering</span>
               </div>
 
@@ -102,8 +105,10 @@ const Home: React.FC = () => {
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-sky-900/10 border-8 border-white/50 rotate-3 hover:rotate-0 transition-transform duration-700">
                 <img
                   src={home}
-                  alt="Industrial Plant"
+                  alt="High-Efficiency Industrial Mineral Water and Beverage Plant"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-1000"
+                  loading="eager"
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-sky-900/30 to-transparent"></div>
               </div>
@@ -145,10 +150,10 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: 'Mineral Water Plant', icon: <Droplets size={28} />, desc: 'Custom turnkey plants with UV and Ozone sterilization.' },
-              { title: 'Fruit Juice Plant', icon: <Shield size={28} />, desc: 'High-rejection membrane systems for pure water output.' },
-              { title: 'Carbonated Soft Drink Plant', icon: <Sparkles size={28} />, desc: 'Automation for shrink-wrapping and multi-format bottling.' },
-              { title: 'Glass Water Botteling Plant', icon: <Users size={28} />, desc: 'Integrated lines for CSD and fruit-based beverages.' }
+              { title: 'Mineral Water Plant', icon: <Droplets size={28} />, desc: 'Complete treatment and bottling solutions for safe drinking water.' },
+              { title: 'Fruit Juice Plant', icon: <Shield size={28} />, desc: 'Turnkey processing and packaging solutions for fruit juices.' },
+              { title: 'Carbonated Soft Drink Plant', icon: <Sparkles size={28} />, desc: 'Complete CSD lines with high-pressure carbonation and filling.' },
+              { title: 'Glass Water Bottling Plant', icon: <Users size={28} />, desc: 'Premium bottling equipment for water in glass containers.' }
             ].map((s, idx) => (
               <div key={idx} className="glass-water p-10 rounded-[2.5rem] hover-float group relative overflow-hidden transition-all duration-300 hover:bg-white/60">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100 rounded-full blur-3xl -z-10 group-hover:bg-teal-100 transition-colors"></div>
@@ -220,7 +225,7 @@ const Home: React.FC = () => {
               <div key={p.id} className="bg-white/5 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-white/5 group hover:bg-white/10 transition-colors hover:border-white/20">
                 <div className="h-64 overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60 z-10"></div>
-                  <img src={p.image} alt={p.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" />
+                  <img src={p.image} alt={`${p.name} - Krupashindu High Performance Machinery`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" loading="lazy" />
                   {/* <div className="absolute top-6 left-6 z-20 bg-teal-500/20 backdrop-blur-md px-3 py-1 rounded-lg border border-teal-500/30">
                     <span className="text-[10px] font-black text-teal-300 uppercase tracking-widest">{p.category}</span>
                   </div> */}
@@ -228,7 +233,7 @@ const Home: React.FC = () => {
                 <div className="p-10">
                   <h3 className="text-2xl font-black text-white mb-4 leading-tight">{p.name}</h3>
                   <p className="text-slate-400 text-sm mb-8 line-clamp-2">{p.description}</p>
-                  <Link to={`/product/${p.id}`} className="w-full py-4 bg-sky-600 rounded-2xl text-white text-xs font-bold uppercase tracking-widest block text-center hover:bg-sky-500 transition-all shadow-lg shadow-sky-900/50">
+                  <Link to={`/products/${p.id}`} className="w-full py-4 bg-sky-600 rounded-2xl text-white text-xs font-bold uppercase tracking-widest block text-center hover:bg-sky-500 transition-all shadow-lg shadow-sky-900/50">
                     Product Details
                   </Link>
                 </div>
@@ -268,11 +273,33 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-sky-600 to-teal-400 rounded-[2rem] rotate-3 opacity-20 blur-lg"></div>
                 <img
                   src={machines}
-                  alt="Precision Engineering"
+                  alt="Precision Engineered Mineral Water Plant Machinery"
                   className="relative rounded-[2rem] shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500 border-4 border-white/50"
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW Certifications Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-teal-600 text-xs font-black uppercase tracking-[0.3em]">Our Credentials</h2>
+            <p className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Accreditations & Certificates.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center justify-items-center">
+            {[cert1, cert2, cert3].map((cert, index) => (
+              <div key={index} className="bg-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-slate-100">
+                <img
+                  src={cert}
+                  alt={`Krupashindu Quality Certification ${index + 1}`}
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -312,7 +339,9 @@ const Home: React.FC = () => {
       </section>
 
       {/* YouTube Showcase Section */}
-      <YoutubeSection />
+      <React.Suspense fallback={<div className="h-96 animate-pulse bg-slate-100 rounded-[4rem] mx-6"></div>}>
+        <YoutubeSection />
+      </React.Suspense>
 
       {/* Infrastructure Carousel */}
       <section className="py-20 bg-slate-50 mb-32">
@@ -320,7 +349,9 @@ const Home: React.FC = () => {
           <h2 className="text-teal-600 text-xs font-black uppercase tracking-[0.3em]">Our Valued Clients</h2>
           <p className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Our Clients & Partners.</p>
         </div>
-        <ImageCarousel />
+        <React.Suspense fallback={<div className="h-64 animate-pulse bg-white border-y border-slate-100"></div>}>
+          <ImageCarousel />
+        </React.Suspense>
       </section>
 
       {/* Testimonials */}

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Settings, Layout, ShieldCheck, HelpCircle, HardHat } from 'lucide-react';
-import sales from "../sales.png"
+import sales from "../sales.webp"
 const Services: React.FC = () => {
   const mainServices = [
     {
@@ -101,7 +101,7 @@ const Services: React.FC = () => {
             <div className="bg-white/5 backdrop-blur-md p-8 rounded-[3rem] border border-white/10 shadow-2xl">
               <img
                 src={sales}
-                alt="Service Support"
+                alt="Krupashindu After-Sales Service and Maintenance Support for Mineral Water Plants"
                 className="rounded-[2rem] shadow-lg border border-white/5 w-full"
               />
             </div>

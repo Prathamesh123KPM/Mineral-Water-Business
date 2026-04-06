@@ -9,6 +9,7 @@ const Contact: React.FC = () => {
     company: '',
     email: '',
     phone: '',
+    country: '',
     requirements: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,20 +34,21 @@ const Contact: React.FC = () => {
     try {
       // TODO: Replace with your actual EmailJS Service ID, Template ID, and Public Key
       await emailjs.send(
-        'service_y5vqpvq',
-        'template_edzdbed',
+        'service_cyr60lp',
+        'template_zpz4obb',
         {
           from_name: formData.name,
           company: formData.company,
           from_email: formData.email,
           phone: formData.phone,
+          country: formData.country,
           message: formData.requirements,
           to_email: 'krupashinduce@gmail.com'
         },
-        'V0g1zF6hq8jPrcste'
+        'BTJk73cCsqV7C7SVl'
       );
       setSubmitStatus('success');
-      setFormData({ name: '', company: '', email: '', phone: '', requirements: '' });
+      setFormData({ name: '', company: '', email: '', phone: '', country: '', requirements: '' });
     } catch (error) {
       console.error('Email error:', error);
       setSubmitStatus('error');
@@ -115,8 +117,8 @@ const Contact: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
+                <div className="space-y-8">
+                  <div className="space-y-3 text-left">
                     <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">Email Address *</label>
                     <input
                       type="email"
@@ -128,16 +130,29 @@ const Contact: React.FC = () => {
                       placeholder="rahul@company.com"
                     />
                   </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">Phone</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-6 py-4 bg-white/60 border border-white rounded-2xl focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all font-medium"
-                      placeholder="+91 0000 000000"
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <div className="space-y-3">
+                      <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-6 py-4 bg-white/60 border border-white rounded-2xl focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all font-medium"
+                        placeholder="+91 0000 000000"
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">Country</label>
+                      <input
+                        type="text"
+                        name="country"
+                        value={formData.country}
+                        onChange={handleChange}
+                        className="w-full px-6 py-4 bg-white/60 border border-white rounded-2xl focus:ring-2 focus:ring-sky-500/20 focus:bg-white transition-all font-medium"
+                        placeholder="Ex: United States"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -229,5 +244,6 @@ const Contact: React.FC = () => {
     </div>
   );
 };
+
 
 export default Contact;
