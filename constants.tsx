@@ -449,7 +449,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Project Management Team",
     readTime: "12 min read",
     category: "Guides",
-    image: "https://images.unsplash.com/photo-1548678967-f1fc5d33904e?auto=format&fit=crop&q=80&w=800"
+    image: mineralWaterPlantImg
   },
   {
     id: 'how-to-start-mineral-water-business-india-2026',
@@ -495,7 +495,7 @@ export const BLOG_POSTS: BlogPost[] = [
     author: "Business Consulting Team",
     readTime: "10 min read",
     category: "Guides",
-    image: "https://images.unsplash.com/photo-1548678967-f1fc5d33904e?auto=format&fit=crop&q=80&w=800"
+    image: packagedDrinkingWaterImg
   },
   {
     id: 'future-of-mineral-water-2026',
