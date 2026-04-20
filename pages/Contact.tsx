@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Building2, Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Phone, MapPin, Building2, Send, Loader2, CheckCircle, AlertCircle, Globe } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
@@ -59,6 +59,11 @@ const Contact: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen">
+      <Helmet>
+        <title>Contact Krupashindu | Get a Project Quote & Consultation</title>
+        <meta name="description" content="Ready to start your mineral water business? Contact our expert technocrats for a free consultation and customized plant project report today." />
+        <link rel="canonical" href="https://krupashindu.co.in/contact" />
+      </Helmet>
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-24 space-y-4">
@@ -189,9 +194,9 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-black text-slate-900 text-lg mb-2">Corporate Office</h3>
-                    <p className="text-slate-500 font-medium leading-relaxed">
+                    <address className="not-italic text-slate-500 font-medium leading-relaxed">
                       Office No 1008, 10th Floor, Kamdhenu 23 MIDC Thane Belapur Rd Kopar Khairane, Navi Mumbai - 400709
-                    </p>
+                    </address>
                   </div>
                 </div>
                 <div className="flex items-start space-x-6 glass-water p-6 rounded-3xl hover-float">
@@ -200,9 +205,18 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-black text-slate-900 text-lg mb-2">Manufacturing Hub</h3>
-                    <p className="text-slate-500 font-medium leading-relaxed">
+                    <address className="not-italic text-slate-500 font-medium leading-relaxed mb-4">
                       Plot No. PAP-R-191, MIDC Rabale, Navi Mumbai – 400706
-                    </p>
+                    </address>
+                    <a 
+                      href="https://share.google/7nJWw4odkiG5QBt9L" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-sky-600 font-bold text-sm hover:text-sky-700 transition-colors group"
+                    >
+                      View on Google Maps
+                      <Globe size={16} className="ml-2 group-hover:rotate-12 transition-transform" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -213,13 +227,13 @@ const Contact: React.FC = () => {
                   <div className="flex items-start space-x-4">
                     <Phone className="text-teal-400 shrink-0 mt-1" size={20} />
                     <div className="flex flex-col space-y-2">
-                      <span className="font-bold text-sm tracking-widest hover:text-teal-400 transition-colors cursor-pointer">+91 98210 22367</span>
-                      <span className="font-bold text-sm tracking-widest hover:text-teal-400 transition-colors cursor-pointer">+91 80809 78282</span>
+                      <a href="tel:+919821022367" className="font-bold text-sm tracking-widest hover:text-teal-400 transition-colors cursor-pointer">+91 98210 22367</a>
+                      <a href="tel:+918080978282" className="font-bold text-sm tracking-widest hover:text-teal-400 transition-colors cursor-pointer">+91 80809 78282</a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Mail className="text-teal-400 shrink-0" size={20} />
-                    <span className="font-bold text-sm tracking-widest">krupashinduce@gmail.com</span>
+                    <span className="font-bold text-sm tracking-widest">krupashinduce [at] gmail [dot] com</span>
                   </div>
                 </div>
 
@@ -228,11 +242,11 @@ const Contact: React.FC = () => {
                   <div className="space-y-6">
                     <div className="flex items-center space-x-4">
                       <Phone className="text-white/60 shrink-0" size={20} />
-                      <span className="font-bold text-sm tracking-widest">+91 82008 48122</span>
+                      <a href="tel:+918200848122" className="font-bold text-sm tracking-widest">+91 82008 48122</a>
                     </div>
                     <div className="flex items-center space-x-4">
                       <Mail className="text-white/60 shrink-0" size={20} />
-                      <span className="font-bold text-sm tracking-widest">kceexport@gmail.com</span>
+                      <span className="font-bold text-sm tracking-widest">kceexport [at] gmail [dot] com</span>
                     </div>
                   </div>
                 </div>

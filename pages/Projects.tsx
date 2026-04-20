@@ -1,10 +1,15 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { PROJECTS } from '../constants';
 
 const Projects: React.FC = () => {
   return (
     <div className="pt-20">
+      <Helmet>
+        <title>Global Projects | Mineral Water Plant Installations 2026</title>
+        <meta name="description" content="View our successful turnkey mineral water and beverage plant installations across Southeast Asia, Africa, and beyond. Proven engineering excellence worldwide." />
+        <link rel="canonical" href="https://krupashindu.co.in/projects" />
+      </Helmet>
       <section className="bg-emerald-800 py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-extrabold mb-6">Our Installed Excellence</h1>

@@ -183,3 +183,31 @@ h6 {
     transform: translate3d(85px, 0, 0);
   }
 }
+
+/* Responsive Mobile Optimizations */
+.rounded-section {
+  border-radius: 2rem;
+}
+
+@media (min-width: 768px) {
+  .rounded-section {
+    border-radius: 4rem;
+  }
+}
+
+.responsive-padding {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .responsive-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.mobile-heading-tight {
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}

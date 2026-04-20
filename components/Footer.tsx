@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Droplets, Mail, Phone, MapPin, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
+import { Droplets, Mail, Phone, MapPin, Facebook, Instagram, Youtube, Linkedin, Globe } from 'lucide-react';
 import logo from '../waterlogo.png';
 
 const Footer: React.FC = () => {
@@ -23,6 +22,7 @@ const Footer: React.FC = () => {
               <a href="https://www.instagram.com/krupashindu_/" className="hover:text-blue-400 transition-colors"><Instagram size={20} /></a>
               <a href="https://in.linkedin.com/in/krupashindu" className="hover:text-blue-400 transition-colors"><Linkedin size={20} /></a>
               <a href="https://www.youtube.com/@KrupashinduConsultingEngineer" className="hover:text-blue-400 transition-colors"><Youtube size={20} /></a>
+              <a href="https://share.google/7nJWw4odkiG5QBt9L" className="hover:text-blue-400 transition-colors" title="Google My Business"><Globe size={20} /></a>
             </div>
           </div>
           {/* Quick Links */}
@@ -43,15 +43,18 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start space-x-3">
                 <Phone size={18} className="text-blue-500 mt-1 shrink-0" />
-                <span>+91 98210 22367<br />+91 80809 78282</span>
+                <address className="not-italic">
+                  <a href="tel:+919821022367" className="hover:underline">+91 98210 22367</a><br />
+                  <a href="tel:+918080978282" className="hover:underline">+91 80809 78282</a>
+                </address>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail size={18} className="text-blue-500 mt-1 shrink-0" />
-                <span>krupashinduce@gmail.com</span>
+                <span>krupashinduce [at] gmail [dot] com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-blue-500 mt-1 shrink-0" />
-                <span>Office No 1008 10th Floor, Kamdhenu 23 MIDC Thane Belapur Rd Kopar Khairane Navi Mumbai - 400709</span>
+                <address className="not-italic">Office No 1008 10th Floor, Kamdhenu 23 MIDC Thane Belapur Rd Kopar Khairane Navi Mumbai - 400709</address>
               </li>
             </ul>
           </div>

@@ -28,10 +28,10 @@ const Blog: React.FC = () => {
                         <span>Knowledge Hub</span>
                     </div>
                     <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight leading-none">
-                        Insights & <span className="text-sky-600">Innovation.</span>
+                        Mineral Water Business <span className="text-sky-600">Insights & Innovation.</span>
                     </h1>
                     <p className="text-xl text-slate-500 max-w-2xl font-medium leading-relaxed">
-                        Exploring the intersection of engineering excellence and industrial beverage production.
+                        Exploring the intersection of engineering excellence and successful mineral water plant setup in the modern industry.
                     </p>
                 </header>
 

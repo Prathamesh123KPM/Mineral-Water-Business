@@ -75,31 +75,41 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full glass-water border-t border-white/50 shadow-2xl py-6 animate-in slide-in-from-top duration-300">
-          <div className="px-6 space-y-3">
-            {navLinks.map((link) => (
+      {/* Mobile Nav Overlay */}
+      <div className={`fixed inset-0 z-40 md:hidden transition-all duration-500 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        {/* Backdrop blur */}
+        <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-md" onClick={() => setIsOpen(false)}></div>
+
+        {/* Menu Content */}
+        <div className={`absolute right-0 top-0 h-full w-[80%] max-w-sm bg-white shadow-2xl transition-transform duration-500 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div className="flex flex-col h-full p-8 pt-24">
+            <div className="flex flex-col space-y-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-2xl font-black tracking-tight transition-colors ${isActive(link.path) ? 'text-sky-600' : 'text-slate-600'
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mt-auto pt-10">
               <Link
-                key={link.name}
-                to={link.path}
+                to="/contact"
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-3 rounded-xl text-lg font-bold tracking-tight transition-colors ${isActive(link.path) ? 'bg-sky-50 text-sky-700' : 'text-slate-600 hover:bg-white/50'
-                  }`}
+                className="block text-center bg-gradient-to-r from-sky-600 to-teal-500 text-white py-5 rounded-2xl font-black uppercase tracking-widest text-sm shadow-xl shadow-sky-500/20 active:scale-95 transition-all"
               >
-                {link.name}
+                Get a Free Quote
               </Link>
-            ))}
-            <Link
-              to="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block mt-6 text-center bg-gradient-to-r from-sky-600 to-teal-500 text-white py-4 rounded-xl font-bold shadow-lg shadow-sky-500/20"
-            >
-              Get a Quote
-            </Link>
+              <p className="text-center text-[10px] font-bold text-slate-400 mt-6 uppercase tracking-[0.2em]">Krupashindu Solutions</p>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

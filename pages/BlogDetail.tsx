@@ -66,10 +66,11 @@ const BlogDetail: React.FC = () => {
                         <div className="w-4 h-[1px] bg-sky-200"></div>
                         <span>{post.category}</span>
                     </div>
-
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.1] mb-12 tracking-tight">
-                        {post.title}
-                    </h1>
+                    <div className="space-y-4">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight tracking-tight">
+                            {post.title}
+                        </h1>
+                    </div>
 
                     <div className="flex flex-wrap items-center gap-8 pt-6 border-t border-slate-200">
                         <div className="flex items-center gap-3">
@@ -105,11 +106,13 @@ const BlogDetail: React.FC = () => {
 
             {/* Blog Image */}
             <div className="max-w-5xl mx-auto px-6 -mt-12 md:-mt-20">
-                <div className="aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                <div className="aspect-square md:aspect-video rounded-2xl md:rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200">
                     <img
                         src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover"
+                        loading="eager"
+                        decoding="async"
                     />
                 </div>
             </div>

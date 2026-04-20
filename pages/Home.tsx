@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import {
   ArrowRight,
   CheckCircle2,
@@ -31,18 +31,25 @@ import cert3 from '../certificate (3).webp';
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    <div className="overflow-hidden bg-[#fafcfd]">
+      <Helmet>
+        <title>Krupashindu | Mineral Water Plant & Bottling Systems
+        </title>
+        <meta name="description" content="Leading manufacturer of mineral water bottling plants, RO systems & turnkey beverage solutions. Explore 2026 project reports & machinery.
+" />
+        <link rel="canonical" href="https://krupashindu.co.in/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-40 overflow-hidden">
         {/* Animated Background Blobs */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none hidden md:block">
           <div className="absolute top-0 right-[-10%] w-[800px] h-[800px] bg-sky-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
           <div className="absolute top-[20%] right-[10%] w-[600px] h-[600px] bg-teal-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-32 left-[-10%] w-[600px] h-[600px] bg-blue-300/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
 
         {/* Animated Water Waves */}
-        <div className="absolute bottom-0 left-0 w-full -z-10 leading-none">
+        <div className="absolute bottom-0 left-0 w-full -z-10 leading-none hidden md:block">
           <svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
             <defs>
               <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
@@ -64,8 +71,8 @@ const Home: React.FC = () => {
                 <span className="text-xs font-bold uppercase tracking-widest text-sky-700">ISO 9001:2015 Certified Engineering</span>
               </div>
 
-              <h1 className="text-6xl md:text-7xl font-extrabold text-slate-900 tracking-[-0.04em] leading-[0.95]">
-                Turnkey <span className="text-water-gradient">Water & Beverages</span> Solutions.
+              <h1 className="text-4xl md:text-7xl font-extrabold text-slate-900 tracking-tight md:tracking-[-0.04em] leading-[0.95] mobile-heading-tight">
+                Turnkey <span className="text-water-gradient">Mineral Water Plant</span> & <span className="text-water-gradient">Water Business</span> Solutions.
               </h1>
 
               <p className="text-xl text-slate-600 leading-relaxed max-w-xl font-medium">
@@ -106,6 +113,8 @@ const Home: React.FC = () => {
                 <img
                   src={home}
                   alt="High-Efficiency Industrial Mineral Water and Beverage Plant"
+                  width={800}
+                  height={600}
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-1000"
                   loading="eager"
                   fetchPriority="high"
@@ -128,24 +137,12 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Trust Ticker - Glass Strip */}
-      {/* <section className="py-12 glass-water border-y border-white/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-[10px] font-black uppercase tracking-[0.4em] text-sky-900/40 mb-8">Trusted by Industry Leaders</p>
-          <div className="flex flex-wrap justify-center gap-10 md:gap-20 items-center opacity-50 hover:opacity-100 transition-opacity duration-500">
-            {CLIENT_LOGOS.map((client, idx) => (
-              <span key={idx} className="text-lg font-black text-slate-800 tracking-tighter">{client}</span>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Features Grid - Liquid Cards */}
-      <section className="py-32">
+      <section className="py-16 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-24 space-y-4">
-            <h2 className="text-teal-500 text-xs font-black uppercase tracking-[0.3em]">Engineering Expertise</h2>
-            <p className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight leading-none">Complete Production Lines.</p>
+          <div className="text-center mb-16 md:mb-24 space-y-4">
+            <h2 className="text-teal-500 text-xs font-black uppercase tracking-[0.3em]">Mineral Water Plant Engineering</h2>
+            <p className="text-3xl md:text-6xl font-black text-slate-900 tracking-tight leading-none">Complete Production Lines.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -155,14 +152,14 @@ const Home: React.FC = () => {
               { title: 'Carbonated Soft Drink Plant', icon: <Sparkles size={28} />, desc: 'Complete CSD lines with high-pressure carbonation and filling.' },
               { title: 'Glass Water Bottling Plant', icon: <Users size={28} />, desc: 'Premium bottling equipment for water in glass containers.' }
             ].map((s, idx) => (
-              <div key={idx} className="glass-water p-10 rounded-[2.5rem] hover-float group relative overflow-hidden transition-all duration-300 hover:bg-white/60">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100 rounded-full blur-3xl -z-10 group-hover:bg-teal-100 transition-colors"></div>
+              <div key={idx} className="glass-water p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] hover-float group relative overflow-hidden transition-all duration-300 hover:bg-white/60">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100 rounded-full blur-3xl -z-10 group-hover:bg-teal-100 transition-colors hidden md:block"></div>
                 <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-2xl flex items-center justify-center mb-10 shadow-lg shadow-sky-500/20 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 md:mb-10 shadow-lg shadow-sky-500/20 group-hover:scale-110 transition-transform">
                     {s.icon}
                   </div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-4">{s.title}</h3>
-                  <p className="text-slate-600 font-medium text-sm leading-relaxed mb-8">{s.desc}</p>
+                  <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-4">{s.title}</h3>
+                  <p className="text-slate-600 font-medium text-sm leading-relaxed mb-6 md:mb-8">{s.desc}</p>
                   <Link to="/services" className="inline-flex items-center text-sky-700 font-bold text-xs uppercase tracking-widest hover:text-sky-500 transition-colors">
                     Explore <ArrowUpRight size={14} className="ml-1" />
                   </Link>
@@ -205,15 +202,15 @@ const Home: React.FC = () => {
       </section>
 
       {/* Featured Products - Deep Ocean Theme */}
-      <section className="py-32 bg-slate-900 rounded-[4rem] mx-4 md:mx-6 mb-32 overflow-hidden relative shadow-2xl shadow-slate-900/30">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,#0ea5e933,transparent)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,#14b8a622,transparent)]"></div>
+      <section className="py-20 md:py-32 bg-slate-900 rounded-2xl md:rounded-[4rem] mx-4 md:mx-6 mb-20 md:mb-32 overflow-hidden relative shadow-2xl shadow-slate-900/30">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,#0ea5e933,transparent)] hidden md:block"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,#14b8a622,transparent)] hidden md:block"></div>
 
-        <div className="max-w-7xl mx-auto px-8 md:px-12 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 gap-8">
             <div className="space-y-4">
               <h2 className="text-teal-400 text-xs font-black uppercase tracking-[0.3em]">Our Portfolio</h2>
-              <p className="text-4xl md:text-5xl font-black text-white tracking-tight">Featured Products.</p>
+              <p className="text-3xl md:text-5xl font-black text-white tracking-tight">Featured Products.</p>
             </div>
             <Link to="/products" className="bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-white/20 transition-all border border-white/10 hover:border-white/30">
               View Entire Catalog
@@ -225,7 +222,7 @@ const Home: React.FC = () => {
               <div key={p.id} className="bg-white/5 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-white/5 group hover:bg-white/10 transition-colors hover:border-white/20">
                 <div className="h-64 overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60 z-10"></div>
-                  <img src={p.image} alt={`${p.name} - Krupashindu High Performance Machinery`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" loading="lazy" />
+                  <img src={p.image} alt={`${p.name} - Krupashindu High Performance Machinery`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" loading="lazy" decoding="async" />
                   {/* <div className="absolute top-6 left-6 z-20 bg-teal-500/20 backdrop-blur-md px-3 py-1 rounded-lg border border-teal-500/30">
                     <span className="text-[10px] font-black text-teal-300 uppercase tracking-widest">{p.category}</span>
                   </div> */}
@@ -270,11 +267,15 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-sky-600 to-teal-400 rounded-[2rem] rotate-3 opacity-20 blur-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-sky-600 to-teal-400 rounded-[2rem] rotate-3 opacity-20 blur-lg hidden md:block"></div>
                 <img
                   src={machines}
                   alt="Precision Engineered Mineral Water Plant Machinery"
+                  width={800}
+                  height={600}
                   className="relative rounded-[2rem] shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500 border-4 border-white/50"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -296,7 +297,11 @@ const Home: React.FC = () => {
                 <img
                   src={cert}
                   alt={`Krupashindu Quality Certification ${index + 1}`}
+                  width={400}
+                  height={500}
                   className="w-full h-auto object-contain rounded-lg"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}
@@ -321,7 +326,11 @@ const Home: React.FC = () => {
                     <img
                       src={member.image}
                       alt={member.name}
+                      width={400}
+                      height={500}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute bottom-6 left-6 z-20 text-white">
                       <h3 className="text-2xl font-black leading-tight mb-1">{member.name}</h3>
@@ -360,7 +369,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {TESTIMONIALS.map((t) => (
               <div key={t.id} className="glass-water p-12 rounded-[2.5rem] hover-float relative group">
-                <div className="absolute -top-6 -right-6 w-20 h-20 bg-sky-100 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute -top-6 -right-6 w-20 h-20 bg-sky-100 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity hidden md:block"></div>
                 <div className="text-teal-500 mb-8 font-black text-6xl leading-none opacity-50">“</div>
                 <p className="text-slate-700 font-medium italic mb-10 text-lg leading-relaxed relative z-10">
                   {t.quote}

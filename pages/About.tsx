@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Target, Eye, ShieldCheck, Award, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import global from "../global.webp"
 import plant from "../plant.webp"
 import { TEAM } from '../constants';
@@ -9,13 +9,18 @@ import { TEAM } from '../constants';
 const About: React.FC = () => {
   return (
     <div className="pt-24 min-h-screen">
+      <Helmet>
+        <title>About Krupashindu | 18+ Years of Beverage Engineering Excellence</title>
+        <meta name="description" content="Dedicated to strategic growth and innovation in the water industry. Learn about our 20-year legacy of delivering global turnkey bottling solutions." />
+        <link rel="canonical" href="https://krupashindu.co.in/about" />
+      </Helmet>
       {/* Header */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-sky-200/30 to-teal-200/30 rounded-full blur-[100px] -z-10"></div>
         <div className="max-w-7xl mx-auto px-6 text-center space-y-6">
           <h2 className="text-teal-600 text-xs font-black uppercase tracking-[0.3em]">Our Story</h2>
-          <h1 className="text-5xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none">
-            Legacy of <span className="text-water-gradient">Engineering</span> Excellence.
+          <h1 className="text-4xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none">
+            Legacy of <span className="text-water-gradient">Mineral Water Plant</span> Excellence.
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
             Mineral Water, Soft Drink, Fruit Juice Plant & Machinery Manufacturing by Krupashindu has been the cornerstone of industrial water treatment and beverage production since 2005.
@@ -35,6 +40,7 @@ const About: React.FC = () => {
                   alt="Krupashindu Mineral Water Plant Engineering and Operations Team"
                   className="w-full h-auto"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -44,7 +50,7 @@ const About: React.FC = () => {
                 <span className="text-xs font-bold uppercase tracking-widest text-slate-600">Established 2005</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
-                Experienced Technocrats at Your Service
+                Experienced <span className="text-sky-600">Water Business</span> Technocrats
               </h2>
               <p className="text-slate-600 leading-relaxed text-lg font-medium">
                 Founded by veteran water treatment technocrats, Krupashindu was established with a singular mission: to bring high-quality, cost-effective mineral water plant solutions to India and global markets.
@@ -113,12 +119,12 @@ const About: React.FC = () => {
               { icon: <Eye size={28} />, title: 'Our Vision', desc: 'To be the world\'s most trusted partner for mineral water machinery, recognized for technical innovation.', color: 'text-teal-600', bg: 'bg-teal-50' },
               { icon: <ShieldCheck size={28} />, title: 'Our Values', desc: 'Quality integrity, customer-centric support, and continuous technical improvement are our foundation.', color: 'text-slate-800', bg: 'bg-slate-50' }
             ].map((v, i) => (
-              <div key={i} className="bg-white/80 backdrop-blur-md p-12 rounded-[2.5rem] border border-white hover-float shadow-lg shadow-sky-900/5">
-                <div className={`w-16 h-16 ${v.bg} rounded-2xl flex items-center justify-center mb-10 ${v.color}`}>
+              <div key={i} className="bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[2rem] md:rounded-[2.5rem] border border-white hover-float shadow-lg shadow-sky-900/5">
+                <div className={`w-14 h-14 md:w-16 md:h-16 ${v.bg} rounded-2xl flex items-center justify-center mb-8 md:mb-10 ${v.color}`}>
                   {v.icon}
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-6">{v.title}</h3>
-                <p className="text-slate-500 font-medium leading-relaxed">{v.desc}</p>
+                <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-4 md:mb-6">{v.title}</h3>
+                <p className="text-slate-500 font-medium leading-relaxed text-sm md:text-base">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -140,6 +146,7 @@ const About: React.FC = () => {
               alt="Krupashindu Global Export Destinations Map for Water Plants"
               className="w-full h-auto opacity-90"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-sky-900/50 to-transparent"></div>
           </div>
