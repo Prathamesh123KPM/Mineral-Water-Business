@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mineralwaterbusiness.com/sitemap.xml
+Sitemap: https://mineralwaterbusiness.com/video-sitemap.xml

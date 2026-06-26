@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://mineralwaterbusiness.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/OtFAZRQ32pU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Fruit Juice Business &amp; Factory Tour</video:title>
+      <video:description>An inside look at a real, low-cost, high-profit fruit juice factory and a guide on setting up your own juice business.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=OtFAZRQ32pU</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/OtFAZRQ32pU</video:player_loc>
+      <video:publication_date>2025-02-10T10:00:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://mineralwaterbusiness.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Iu4wXtPgueI/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Low Budget Mineral Water Plant Setup</video:title>
+      <video:description>Complete business guide and cost breakdown for starting a packaged drinking water plant on a low budget.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=Iu4wXtPgueI</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/Iu4wXtPgueI</video:player_loc>
+      <video:publication_date>2025-03-12T14:30:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://mineralwaterbusiness.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/VQy6xMufrVU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Natural &amp; Alkaline Mineral Water Plant Cost</video:title>
+      <video:description>A detailed guide on setup costs, machinery, and filtration systems for natural mineral water and alkaline water plants in India.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=VQy6xMufrVU</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/VQy6xMufrVU</video:player_loc>
+      <video:publication_date>2025-01-20T09:15:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://mineralwaterbusiness.com/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Rhf1YL6-NBA/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>How to Start a Packaged Mineral Water Plant</video:title>
+      <video:description>Step-by-step guidance on starting a mineral water plant business, covering manufacturing, licensing, and bottle production.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=Rhf1YL6-NBA</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/Rhf1YL6-NBA</video:player_loc>
+      <video:publication_date>2024-11-05T11:45:00+05:30</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+</urlset>
