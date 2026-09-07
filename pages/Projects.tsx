@@ -4,27 +4,27 @@ import { PROJECTS } from '../constants';
 const Projects: React.FC = () => {
   return (
     <div className="pt-20">
-      <title>Global Projects | Mineral Water Plant Setup Portfolio</title>
-      <meta name="description" content="See our global track record of mineral water plant installations and turnkey beverage machinery setups completed across 30+ countries." />
+      <title>Mineral Water Plant &amp; Bottling Plant Projects Worldwide | Krupashindu</title>
+      <meta name="description" content="Explore our global portfolio of commissioned mineral water plants, packaged drinking water plants, and automatic bottling plant installations across 30+ countries." />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mineralwaterbusiness.com/projects" />
-      <meta property="og:title" content="Global Projects | Mineral Water Plant Setup Portfolio" />
-      <meta property="og:description" content="See our global track record of mineral water plant installations and turnkey beverage machinery setups completed across 30+ countries." />
+      <meta property="og:title" content="Mineral Water Plant &amp; Bottling Plant Projects Worldwide | Krupashindu" />
+      <meta property="og:description" content="Explore our global portfolio of commissioned mineral water plants, packaged drinking water plants, and automatic bottling plant installations across 30+ countries." />
       <meta property="og:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://mineralwaterbusiness.com/projects" />
-      <meta name="twitter:title" content="Global Projects | Mineral Water Plant Setup Portfolio" />
-      <meta name="twitter:description" content="See our global track record of mineral water plant installations and turnkey beverage machinery setups completed across 30+ countries." />
+      <meta name="twitter:title" content="Mineral Water Plant &amp; Bottling Plant Projects Worldwide | Krupashindu" />
+      <meta name="twitter:description" content="Explore our global portfolio of commissioned mineral water plants, packaged drinking water plants, and automatic bottling plant installations across 30+ countries." />
       <meta name="twitter:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
       <section className="bg-emerald-800 py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-extrabold mb-6">Our Installed Excellence</h1>
-          <p className="text-emerald-100 max-w-2xl mx-auto text-lg">
-            A visual showcase of our turnkey projects across diverse global landscapes.
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Mineral Water Plant &amp; Bottling Plant Projects</h1>
+          <p className="text-emerald-100 max-w-3xl mx-auto text-base md:text-lg">
+            A visual showcase of our commissioned <strong>Packaged Drinking Water Plants</strong>, industrial <strong>Mineral Water Plants</strong>, and high-speed <strong>Bottling Plants</strong> across 30+ global nations.
           </p>
         </div>
       </section>

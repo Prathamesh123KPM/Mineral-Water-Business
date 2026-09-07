@@ -60,7 +60,10 @@ const BLOG_POST_IDS = [
   'mineral-water-plant-project-report-packing-machine',
   'mineral-water-bottling-plant-price-machine-cost-india',
   'small-scale-mineral-water-plant-layout-packaging',
-  'small-mineral-water-plant-project-report-pdf-guide'
+  'small-mineral-water-plant-project-report-pdf-guide',
+  'mineral-water-plant-in-south-africa',
+  'fruit-juice-bottling-plant-tanzania',
+  'soft-drink-beverage-plant-kenya'
 ];
 
 export default defineConfig({

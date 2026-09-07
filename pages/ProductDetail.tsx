@@ -127,21 +127,21 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen pb-24">
-      <title>{`${product.name} | Krupashindu`}</title>
+      <title>{`${product.name} Manufacturer & Machinery | Krupashindu`}</title>
       <meta name="description" content={product.description.length > 155 ? `${product.description.substring(0, 152)}...` : product.description} />
       {images.length > 0 && <link rel="preload" href={images[0]} as="image" fetchPriority="high" />}
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`https://mineralwaterbusiness.com/products/${product.id}`} />
-      <meta property="og:title" content={`${product.name} | Krupashindu`} />
+      <meta property="og:title" content={`${product.name} Manufacturer & Machinery | Krupashindu`} />
       <meta property="og:description" content={product.description.length > 155 ? `${product.description.substring(0, 152)}...` : product.description} />
       <meta property="og:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={`https://mineralwaterbusiness.com/products/${product.id}`} />
-      <meta name="twitter:title" content={`${product.name} | Krupashindu`} />
+      <meta name="twitter:title" content={`${product.name} Manufacturer & Machinery | Krupashindu`} />
       <meta name="twitter:description" content={product.description.length > 155 ? `${product.description.substring(0, 152)}...` : product.description} />
       <meta name="twitter:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
@@ -173,32 +173,45 @@ const ProductDetail: React.FC = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
-          {/* Left Column: Image Carousel */}
-          <div className="space-y-6">
-            <div className="aspect-square md:aspect-video lg:aspect-square rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-slate-100 relative group shadow-2xl shadow-sky-900/10">
-              <div className="absolute inset-0 bg-slate-100 animate-pulse -z-10"></div>
-              <img
-                src={images[activeImageIndex]}
-                alt={`${product.name} - High-Efficiency Machine View ${activeImageIndex + 1}`}
-                className="w-full h-full object-cover transition-all duration-500"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-              />
+        {(() => {
+          const isDiagram = product.id === 'mineral-water-plant' || product.id === 'fruit-juice-plant' || product.id === 'soft-drink-plant';
+          return (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
+              {/* Left Column: Image Carousel */}
+              <div className="space-y-6">
+                <div
+                  className={
+                    isDiagram
+                      ? "aspect-square rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white relative group shadow-2xl shadow-sky-900/10 p-4 flex items-center justify-center"
+                      : "aspect-square rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-slate-100 relative group shadow-2xl shadow-sky-900/10"
+                  }
+                >
+                  <div className="absolute inset-0 bg-slate-100 animate-pulse -z-10"></div>
+                  <img
+                    src={images[activeImageIndex]}
+                    alt={`${product.name} - High-Efficiency Machine View ${activeImageIndex + 1}`}
+                    className={
+                      isDiagram
+                        ? "w-full h-full object-contain transition-all duration-500"
+                        : "w-full h-full object-cover transition-all duration-500"
+                    }
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
 
               {/* Navigation Arrows */}
               {images.length > 1 && (
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/30 backdrop-blur-md border border-white/50 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-slate-900 transition-all opacity-0 group-hover:opacity-100 transform translate-x-[-20px] group-hover:translate-x-0"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-900/50 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-slate-900 hover:text-white transition-all opacity-0 group-hover:opacity-100 transform translate-x-[-20px] group-hover:translate-x-0"
                   >
                     <ChevronLeft size={24} />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/30 backdrop-blur-md border border-white/50 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-slate-900 transition-all opacity-0 group-hover:opacity-100 transform translate-x-[20px] group-hover:translate-x-0"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-900/50 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-slate-900 hover:text-white transition-all opacity-0 group-hover:opacity-100 transform translate-x-[20px] group-hover:translate-x-0"
                   >
                     <ChevronRight size={24} />
                   </button>
@@ -218,12 +231,12 @@ const ProductDetail: React.FC = () => {
                   <button
                     key={idx}
                     onClick={() => setActiveImageIndex(idx)}
-                    className={`relative w-24 h-24 flex-shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${activeImageIndex === idx
+                    className={`relative w-24 h-24 flex-shrink-0 rounded-2xl overflow-hidden bg-white p-1 border transition-all duration-300 ${activeImageIndex === idx
                       ? 'ring-4 ring-sky-500 ring-offset-2 opacity-100 scale-105'
                       : 'opacity-60 hover:opacity-100 hover:scale-105'
                       }`}
                   >
-                    <img src={img} alt={`${product.name} Image Thumbnail ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                    <img src={img} alt={`${product.name} Image Thumbnail ${idx + 1}`} className="w-full h-full object-contain" loading="lazy" decoding="async" />
                   </button>
                 ))}
               </div>
@@ -278,6 +291,8 @@ const ProductDetail: React.FC = () => {
             </div>
           </div>
         </div>
+        );
+        })()}
 
         {/* FAQ Section */}
         <section className="py-24 mt-16 border-t border-slate-100">

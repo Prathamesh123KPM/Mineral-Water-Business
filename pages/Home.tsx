@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { CLIENT_LOGOS, TESTIMONIALS, PRODUCTS, TEAM } from '../constants';
 import Photo from '../water.webp';
-import home from "../Homepage.webp"
+import home from "../newhero.webp";
 import machines from "../Engineering for efficincy.webp"
 const ImageCarousel = React.lazy(() => import('../components/ImageCarousel'));
 const YoutubeSection = React.lazy(() => import('../components/YoutubeSection'));
@@ -34,24 +34,28 @@ const Home: React.FC = () => {
 
   const homeFaqs = [
     {
-      q: "What is the estimated cost to set up a mineral water plant in India?",
-      a: "The setup cost for a fully automatic 2000 BPH mineral water plant typically ranges from ₹15 Lakhs to ₹35 Lakhs for machinery, plus civil works and licensing. Total turnkey investment varies between ₹40 Lakhs and ₹1 Crore depending on land and capacity."
+      q: "Who are the leading Mineral Water Plant Manufacturers in India?",
+      a: "Krupashindu is an ISO 9001:2015 certified engineering firm recognized among the top Mineral Water Plant Manufacturers in India and globally. Established in 2005, we have engineered and commissioned over 500+ mineral water plants, automatic bottling lines, and RO treatment systems across India and 30+ countries worldwide."
     },
     {
-      q: "Is ISI/BIS mark mandatory for packaged drinking water?",
-      a: "Yes, selling packaged drinking water without a valid BIS (ISI IS:14543) certification is strictly illegal in India. Krupashindu provides complete end-to-end guidance for BIS compliance, documentation, and in-house laboratory setup."
+      q: "What is the cost to set up a Packaged Drinking Water Plant in 2026?",
+      a: "The machinery cost for a semi-automatic 1000–2000 BPH Packaged Drinking Water Plant starts from ₹15 Lakhs to ₹25 Lakhs. A fully automatic high-speed bottling line (4000 to 12000 BPH) ranges from ₹35 Lakhs to ₹90 Lakhs. Total project investment depends on building size, civil infrastructure, and in-house laboratory testing setup."
     },
     {
-      q: "What types of water sources can be treated in your mineral water plants?",
-      a: "Our advanced RO and filtration plants can treat borewell water, river water, municipal supply, and open well water. We customize the multi-stage filtration based on raw water TDS and chemical composition."
+      q: "What machinery is required for a complete automatic Bottling Plant?",
+      a: "A turnkey Bottling Plant setup includes: Multi-stage RO Water Treatment, UV Sterilization & Ozonation, Fully Automatic PET Bottle Blow Moulding Machine, Monoblock Rinser-Filler-Capper (RFC), Automatic Sticker/Shrink Labeling Machine, Automatic Shrink Wrapping Case Packer, and Date Coding systems."
     },
     {
-      q: "Do you export machinery and offer installation outside India?",
-      a: "Yes, Krupashindu is a prominent exporter with successful plant installations across 30+ countries including the US, Middle East, Africa, and Dominican Republic. We provide on-site commissioning and global technical support."
+      q: "What is the difference between a Mineral Water Plant and a Packaged Drinking Water Plant?",
+      a: "A Natural Mineral Water Plant processes natural mineral spring water requiring IS:13428 certification. A Packaged Drinking Water Plant processes underground/borewell or surface water through RO and remineralization conforming to BIS IS:14543 certification, which accounts for over 90% of commercial bottled water sales."
     },
     {
-      q: "What is the lifespan of an industrial RO membrane?",
-      a: "With proper pre-treatment (water softening/antiscalant dosing) and timely CIP (Clean-in-Place) chemical washing, premium industrial RO membranes typically last between 2 to 4 years before requiring replacement."
+      q: "Is ISI/BIS mark mandatory for packaged drinking water manufacturing?",
+      a: "Yes, selling packaged drinking water without a valid BIS (ISI IS:14543) certification is strictly illegal in India. Krupashindu provides complete turnkey support including plant layout drawing, documentation, and in-house microbiological/chemical laboratory setup to ensure guaranteed BIS license approval."
+    },
+    {
+      q: "Do you export Mineral Water Plant machinery and offer global on-site commissioning?",
+      a: "Yes, Krupashindu exports turnkey mineral water plants and bottling machinery to 30+ countries across the USA, Middle East, Africa, and Latin America. We provide complete sea-worthy export packaging, on-site installation, commissioning, and local operator training."
     }
   ];
 
@@ -66,58 +70,32 @@ const Home: React.FC = () => {
         "url": "https://mineralwaterbusiness.com/",
         "logo": "https://mineralwaterbusiness.com/waterlogo.png",
         "foundingDate": "2005",
-        "description": "Leading manufacturer and exporter of mineral water bottling plants, RO systems, and turnkey beverage solutions. ISO 9001:2015 certified engineering company.",
+        "description": "Leading mineral water plant manufacturers and bottling plant engineers. Turnkey packaged drinking water plant setups and RO systems worldwide.",
+        "knowsAbout": [
+          "Mineral Water Plant",
+          "Bottling Plant",
+          "Packaged Drinking Water Plant",
+          "Mineral Water Plant Manufacturers",
+          "Industrial RO Systems",
+          "BIS IS:14543 Compliance"
+        ],
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+91-98210-22367",
           "contactType": "sales",
           "email": "krupashinduce@gmail.com",
           "areaServed": ["IN", "US", "AE", "OM", "DO", "GH", "Global"],
-          "availableLanguage": ["English", "Hindi", "Marathi"]
-        },
-        "sameAs": [
-          "https://www.facebook.com/KrupashinduConsultingEngineers",
-          "https://www.instagram.com/krupashindu_/",
-          "https://in.linkedin.com/in/krupashindu",
-          "https://www.youtube.com/@KrupashinduConsultingEngineer",
-          "https://share.google/7nJWw4odkiG5QBt9L"
-        ]
+          "availableLanguage": ["en", "Hindi", "Marathi"]
+        }
       },
       {
-        "@type": "LocalBusiness",
-        "@id": "https://mineralwaterbusiness.com/#localbusiness",
-        "name": "Krupashindu Consulting Engineers",
-        "image": "https://mineralwaterbusiness.com/Homepage.webp",
-        "telephone": ["+91-98210-22367", "+91-80809-78282"],
-        "email": "krupashinduce@gmail.com",
+        "@type": "WebSite",
+        "@id": "https://mineralwaterbusiness.com/#website",
         "url": "https://mineralwaterbusiness.com/",
-        "priceRange": "$$$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Office No 1008, 10th Floor, Kamdhenu 23 MIDC Thane Belapur Rd, Kopar Khairane",
-          "addressLocality": "Navi Mumbai",
-          "addressRegion": "Maharashtra",
-          "postalCode": "400709",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 19.1176,
-          "longitude": 73.003
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:30",
-          "closes": "18:30"
-        },
-        "sameAs": [
-          "https://www.facebook.com/KrupashinduConsultingEngineers",
-          "https://www.instagram.com/krupashindu_/",
-          "https://in.linkedin.com/in/krupashindu",
-          "https://www.youtube.com/@KrupashinduConsultingEngineer",
-          "https://share.google/7nJWw4odkiG5QBt9L"
-        ]
+        "name": "Krupashindu - Mineral Water Plant Manufacturers",
+        "publisher": {
+          "@id": "https://mineralwaterbusiness.com/#organization"
+        }
       },
       {
         "@type": "FAQPage",
@@ -136,23 +114,23 @@ const Home: React.FC = () => {
 
   return (
     <div className="overflow-hidden bg-[#fafcfd]">
-      <title>Mineral Water & Bottling Plant Manufacturer | Krupashindu</title>
-      <meta name="description" content="Leading mineral water plant & bottling machinery manufacturer. Setup high-capacity RO systems, juice plants, and carbonated soft drink lines globally." />
+      <title>Mineral Water Plant Manufacturers &amp; Bottling Plant Setup | Krupashindu</title>
+      <meta name="description" content="Top Mineral Water Plant Manufacturers &amp; Bottling Plant specialists. Turnkey packaged drinking water plant setups, RO machinery &amp; ISI/BIS compliance in India &amp; global." />
       <link rel="preload" href={home} as="image" fetchPriority="high" />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mineralwaterbusiness.com/" />
-      <meta property="og:title" content="Mineral Water & Bottling Plant Manufacturer | Krupashindu" />
-      <meta property="og:description" content="Leading mineral water plant & bottling machinery manufacturer. Setup high-capacity RO systems, juice plants, and carbonated soft drink lines globally." />
-      <meta property="og:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
+      <meta property="og:title" content="Mineral Water Plant Manufacturers &amp; Bottling Plant Setup | Krupashindu" />
+      <meta property="og:description" content="Top Mineral Water Plant Manufacturers &amp; Bottling Plant specialists. Turnkey packaged drinking water plant setups, RO machinery &amp; ISI/BIS compliance in India &amp; global." />
+      <meta property="og:image" content="https://mineralwaterbusiness.com/newhero.webp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://mineralwaterbusiness.com/" />
-      <meta name="twitter:title" content="Mineral Water & Bottling Plant Manufacturer | Krupashindu" />
-      <meta name="twitter:description" content="Leading mineral water plant & bottling machinery manufacturer. Setup high-capacity RO systems, juice plants, and carbonated soft drink lines globally." />
-      <meta name="twitter:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
+      <meta name="twitter:title" content="Mineral Water Plant Manufacturers &amp; Bottling Plant Setup | Krupashindu" />
+      <meta name="twitter:description" content="Top Mineral Water Plant Manufacturers &amp; Bottling Plant specialists. Turnkey packaged drinking water plant setups, RO machinery &amp; ISI/BIS compliance in India &amp; global." />
+      <meta name="twitter:image" content="https://mineralwaterbusiness.com/newhero.webp" />
 
       <script type="application/ld+json">
         {JSON.stringify(orgSchema)}
@@ -273,16 +251,18 @@ const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {PRODUCTS.slice(0, 3).map((p) => (
-              <div key={p.id} className="bg-white/5 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-white/5 group hover:bg-white/10 transition-colors hover:border-white/20">
-                <div className="h-64 overflow-hidden relative">
-                  <img src={p.image} alt={`${p.name} - Krupashindu High Performance Machinery`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" loading="lazy" decoding="async" />
+              <div key={p.id} className="bg-white/5 backdrop-blur-xl rounded-[2.5rem] overflow-hidden border border-white/5 group hover:bg-white/10 transition-colors hover:border-white/20 flex flex-col">
+                <div className="aspect-square bg-white overflow-hidden relative flex items-center justify-center p-4">
+                  <img src={p.image} alt={`${p.name} - Krupashindu High Performance Machinery`} className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
                   {/* <div className="absolute top-6 left-6 z-20 bg-teal-500/20 backdrop-blur-md px-3 py-1 rounded-lg border border-teal-500/30">
                     <span className="text-[10px] font-black text-teal-300 uppercase tracking-widest">{p.category}</span>
                   </div> */}
                 </div>
-                <div className="p-10">
-                  <h3 className="text-2xl font-black text-white mb-4 leading-tight">{p.name}</h3>
-                  <p className="text-slate-400 text-sm mb-8 line-clamp-2">{p.description}</p>
+                <div className="p-10 flex flex-col flex-grow justify-between">
+                  <div>
+                    <h3 className="text-2xl font-black text-white mb-4 leading-tight">{p.name}</h3>
+                    <p className="text-slate-400 text-sm mb-8 line-clamp-2">{p.description}</p>
+                  </div>
                   <Link to={`/products/${p.id}`} className="w-full py-4 bg-sky-600 rounded-2xl text-white text-xs font-bold uppercase tracking-widest block text-center hover:bg-sky-500 transition-all shadow-lg shadow-sky-900/50">
                     Product Details
                   </Link>
@@ -439,11 +419,30 @@ const Home: React.FC = () => {
       <section className="py-20 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto space-y-6">
-            <h2 className="text-teal-600 text-xs font-black uppercase tracking-[0.3em] font-black">Industrial Expertise</h2>
+            <h2 className="text-teal-600 text-xs font-black uppercase tracking-[0.3em]">Industrial Expertise</h2>
             <p className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Global Turnkey Beverage Project Specialists</p>
             <p className="text-slate-600 leading-relaxed font-medium text-sm md:text-base pt-2">
               As a premier <strong>Mineral Water Plant Manufacturer</strong> and <strong>Bottling Plant Manufacturer</strong>, Krupashindu provides end-to-end engineering excellence. We specialize in designing, fabricating, and commissioning high-capacity <strong>Packaged Drinking Water Plants</strong>, industrial <strong>Water Treatment Plants</strong>, automated fruit <strong>Juice Plants</strong>, and custom <strong>Carbonated Soft Drink Plants</strong>. From initial feasibility reports to complete site layout design and after-sales maintenance, we ensure your beverage venture succeeds.
             </p>
+            <div className="flex flex-wrap justify-center gap-2 pt-4">
+              {[
+                { name: "Turnkey Mineral Water Plants", link: "/products/mineral-water-plant" },
+                { name: "Monoblock RFC Bottling Lines", link: "/products/fully-automatic-rinser-filler-capper" },
+                { name: "Industrial Commercial RO Plants", link: "/products/industrial-ro-plant" },
+                { name: "Automatic PET Blowing Machines", link: "/products/automatic-pet-bottle-blowing-machine" },
+                { name: "BIS IS:14543 Lab Setup", link: "/services" },
+                { name: "Global Export to 30+ Nations", link: "/projects" }
+              ].map((badge, idx) => (
+                <Link
+                  key={idx}
+                  to={badge.link}
+                  className="text-xs font-bold text-slate-700 bg-slate-50 hover:bg-sky-50 hover:text-sky-600 px-3.5 py-1.5 rounded-full border border-slate-200 hover:border-sky-300 transition-all shadow-sm inline-flex items-center gap-1.5"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                  {badge.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>

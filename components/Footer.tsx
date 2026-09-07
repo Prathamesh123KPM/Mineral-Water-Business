@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Droplets, Mail, Phone, MapPin, Facebook, Instagram, Youtube, Linkedin, Globe } from 'lucide-react';
+import { SEO_KEYWORD_CATEGORIES } from '../seoData';
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-gray-300 pt-16 pb-8">
@@ -75,22 +76,37 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* SEO Keywords Section */}
-        <div className="border-t border-gray-800 pt-8 pb-8 mb-8">
-          <p className="text-xs font-bold text-gray-500 mb-4 uppercase tracking-widest">Popular Industry Searches</p>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 text-[10px] text-gray-600">
-            {[
-              "mineral water bottling plant price", "mineral water machine price in india", "mineral water packaging",
-              "mineral water plant machine price", "mineral water plant project", "small mineral water plant project report pdf",
-              "small scale mineral water plant", "bottled water industry", "drinking water project", "how to start bisleri water business",
-              "isi mark registration fees", "manufacturing cost of coca cola", "mineral water packing machine",
-              "mineral water plant project report", "pani bottle business", "purified water business plan", "ro plant solutions",
-              "ro setup", "ro water and mineral water", "ro water business", "ro water filter system installation",
-              "water bottle manufacturing cost", "water bottle plant machine", "water bottle plant machinery",
-              "water factory machine", "water packets machine", "water plant machine cost", "water plants in india",
-              "water processing plant", "water softener plant manufacturer"
-            ].map((tag, i) => (
-              <span key={i} className="hover:text-blue-400 transition-colors cursor-default">{tag} {i !== 29 && "•"}</span>
+        {/* SEO Keywords & Industry Solutions Directory */}
+        <div className="border-t border-slate-800 pt-10 pb-8 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <p className="text-xs font-black text-sky-400 uppercase tracking-widest">Industry Solutions & Search Directory</p>
+              <p className="text-xs text-slate-400 mt-1">Explore our high-demand mineral water plant configurations, machinery, and consulting capabilities.</p>
+            </div>
+            <Link to="/products" className="text-xs font-bold text-sky-400 hover:text-sky-300 transition-colors inline-flex items-center gap-1">
+              View All Equipment &rarr;
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-xs text-slate-400">
+            {SEO_KEYWORD_CATEGORIES.map((cat, idx) => (
+              <div key={idx} className="bg-slate-800/40 rounded-xl p-4 border border-slate-800/80 hover:border-slate-700/80 transition-colors">
+                <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider mb-2.5 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                  {cat.title}
+                </h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {cat.keywords.map((kw, kIdx) => (
+                    <Link
+                      key={kIdx}
+                      to={kw.link || "/products"}
+                      className="text-[11px] text-slate-400 hover:text-sky-300 hover:bg-slate-800 px-2 py-0.5 rounded transition-all inline-block border border-transparent hover:border-slate-700"
+                    >
+                      {kw.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>

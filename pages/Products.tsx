@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { CheckCircle2, Search, ArrowUpRight, Eye, ChevronDown } from 'lucide-react';
+import { CheckCircle2, Search, ArrowUpRight, Eye, ChevronDown, Sparkles, Tag, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PRODUCTS } from '../constants';
+import { SEO_KEYWORD_CATEGORIES } from '../seoData';
 
 const Products: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [activeKeywordCategory, setActiveKeywordCategory] = useState<string>('All');
 
   const productFaqs = [
     {
@@ -48,21 +50,21 @@ const Products: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen pb-24">
-      <title>Mineral Water Plant Portfolio | Machinery & Equipment 2026</title>
-      <meta name="description" content="Explore our extensive range of high-performance mineral water plant machines, bottling lines, and beverage production equipment for your water business." />
+      <title>Mineral Water Plant &amp; Bottling Plant Machinery | Packaged Drinking Water</title>
+      <meta name="description" content="Explore high-capacity mineral water plant machinery, automatic bottling plants, and turnkey packaged drinking water plants from certified manufacturers." />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mineralwaterbusiness.com/products" />
-      <meta property="og:title" content="Mineral Water Plant Portfolio | Machinery & Equipment 2026" />
-      <meta property="og:description" content="Explore our extensive range of high-performance mineral water plant machines, bottling lines, and beverage production equipment for your water business." />
+      <meta property="og:title" content="Mineral Water Plant &amp; Bottling Plant Machinery | Packaged Drinking Water" />
+      <meta property="og:description" content="Explore high-capacity mineral water plant machinery, automatic bottling plants, and turnkey packaged drinking water plants from certified manufacturers." />
       <meta property="og:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://mineralwaterbusiness.com/products" />
-      <meta name="twitter:title" content="Mineral Water Plant Portfolio | Machinery & Equipment 2026" />
-      <meta name="twitter:description" content="Explore our extensive range of high-performance mineral water plant machines, bottling lines, and beverage production equipment for your water business." />
+      <meta name="twitter:title" content="Mineral Water Plant &amp; Bottling Plant Machinery | Packaged Drinking Water" />
+      <meta name="twitter:description" content="Explore high-capacity mineral water plant machinery, automatic bottling plants, and turnkey packaged drinking water plants from certified manufacturers." />
       <meta name="twitter:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       <script type="application/ld+json">
@@ -72,10 +74,10 @@ const Products: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-sky-200/30 rounded-[100%] blur-[100px] -z-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8">
-            Our <span className="text-water-gradient">Mineral Water Plant</span> Portfolio.
+            <span className="text-water-gradient">Mineral Water Plant</span> & <span className="text-water-gradient">Bottling Plant</span> Machinery
           </h1>
-          <p className="text-slate-600 max-w-2xl mx-auto text-xl font-medium">
-            Explore our range of heavy-duty **mineral water plant machines** and production equipment engineered for continuous performance and purity in your **water business**.
+          <p className="text-slate-600 max-w-3xl mx-auto text-xl font-medium">
+            Explore our range of heavy-duty <strong>Mineral Water Plants</strong>, automatic <strong>Bottling Plants</strong>, and complete <strong>Packaged Drinking Water Plants</strong> engineered by trusted <strong>Mineral Water Plant Manufacturers</strong>.
           </p>
         </div>
       </section>
@@ -83,20 +85,38 @@ const Products: React.FC = () => {
       <section className="pb-40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {PRODUCTS.map((p) => (
-              <div key={p.id} className="glass-water rounded-2xl md:rounded-[3rem] overflow-hidden hover-float group flex flex-col transition-all duration-300">
-                <Link to={`/products/${p.id}`} className="h-64 md:h-72 overflow-hidden relative block">
-                  <img src={p.image} alt={`${p.name} - Krupashindu Turnkey Beverage Solutions`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                  {/* <div className="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-sky-700 shadow-sm">
-                    {p.category}
-                  </div> */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div className="bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-slate-900 flex items-center">
-                      <Eye size={16} className="mr-2" /> View Details
+            {PRODUCTS.map((p, index) => {
+              const isDiagram = index < 3;
+              return (
+                <div key={p.id} className="glass-water rounded-2xl md:rounded-[3rem] overflow-hidden hover-float group flex flex-col transition-all duration-300">
+                  <Link
+                    to={`/products/${p.id}`}
+                    className={
+                      isDiagram
+                        ? "aspect-square bg-white overflow-hidden relative block p-4 flex items-center justify-center"
+                        : "h-64 md:h-72 overflow-hidden relative block"
+                    }
+                  >
+                    <img
+                      src={p.image}
+                      alt={`${p.name} - Krupashindu Turnkey Beverage Solutions`}
+                      className={
+                        isDiagram
+                          ? "w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                          : "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      }
+                      loading="lazy"
+                    />
+                    {/* <div className="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest text-sky-700 shadow-sm">
+                      {p.category}
+                    </div> */}
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <div className="bg-white/90 backdrop-blur-md px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-slate-900 flex items-center">
+                        <Eye size={16} className="mr-2" /> View Details
+                      </div>
                     </div>
-                  </div>
-                </Link>
-                <div className="p-7 md:p-10 flex flex-col flex-grow">
+                  </Link>
+                  <div className="p-7 md:p-10 flex flex-col flex-grow">
                   <Link to={`/products/${p.id}`} className="block">
                     <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-4 hover:text-sky-600 transition-colors">{p.name}</h3>
                   </Link>
@@ -121,7 +141,8 @@ const Products: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
+            );
+          })}
           </div>
         </div>
       </section>
@@ -160,26 +181,89 @@ const Products: React.FC = () => {
         </div>
       </section>
 
-      {/* SEO Keywords Section */}
-      <section className="py-12 bg-slate-50 border-t border-slate-200">
+      {/* Interactive SEO Solutions & Search Directory */}
+      <section className="py-16 bg-gradient-to-b from-slate-50 to-slate-100/70 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Popular Search Terms</h2>
-          <div className="flex flex-wrap gap-x-4 gap-y-3">
-            {[
-              "mineral water bottling plant price", "mineral water machine price in india", "mineral water packaging",
-              "mineral water plant machine price", "mineral water plant project", "small mineral water plant project report pdf",
-              "small scale mineral water plant", "bottled water industry", "drinking water project", "how to start bisleri water business",
-              "isi mark registration fees", "manufacturing cost of coca cola", "mineral water packing machine",
-              "mineral water plant project report", "pani bottle business", "purified water business plan", "ro plant solutions",
-              "ro setup", "ro water and mineral water", "ro water business", "ro water filter system installation",
-              "water bottle manufacturing cost", "water bottle plant machine", "water bottle plant machinery",
-              "water factory machine", "water packets machine", "water plant machine cost", "water plants in india",
-              "water processing plant", "water softener plant manufacturer"
-            ].map((tag, i) => (
-              <span key={i} className="text-[11px] font-bold text-slate-500 bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm cursor-default hover:border-sky-300 hover:text-sky-600 transition-colors">
-                {tag}
-              </span>
-            ))}
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-100 text-sky-800 text-xs font-bold uppercase tracking-wider mb-3">
+                <Sparkles size={14} className="text-sky-600" />
+                Industry Search Directory
+              </div>
+              <h2 className="text-2xl md:text-3xl font-black text-slate-900 tracking-tight">
+                Popular Turnkey Searches & Machinery Topics
+              </h2>
+              <p className="text-slate-600 text-sm mt-1 max-w-2xl">
+                Quickly navigate our high-capacity mineral water plant solutions, packaging machinery, RO systems, and regulatory standards.
+              </p>
+            </div>
+            
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap gap-2">
+              {['All', ...SEO_KEYWORD_CATEGORIES.map(c => c.title.split(' ')[0])].map((catName) => (
+                <button
+                  key={catName}
+                  onClick={() => setActiveKeywordCategory(catName)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-200 ${
+                    activeKeywordCategory === catName
+                      ? 'bg-sky-600 text-white shadow-md shadow-sky-600/20'
+                      : 'bg-white text-slate-600 hover:bg-slate-200/70 border border-slate-200'
+                  }`}
+                >
+                  {catName === 'All' ? 'All Topics' : catName}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Keywords Grid / Chips */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            {SEO_KEYWORD_CATEGORIES.flatMap((cat) =>
+              cat.keywords
+                .filter(
+                  () =>
+                    activeKeywordCategory === 'All' ||
+                    cat.title.toLowerCase().includes(activeKeywordCategory.toLowerCase())
+                )
+                .map((kw, i) => (
+                  <Link
+                    key={`${cat.title}-${i}`}
+                    to={kw.link || '/products'}
+                    className="group bg-white hover:bg-sky-50/50 p-4 rounded-xl border border-slate-200/90 hover:border-sky-300 shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between gap-3"
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-sky-100/70 text-sky-700 flex items-center justify-center flex-shrink-0 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                        <Tag size={14} />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-xs font-bold text-slate-800 group-hover:text-sky-700 transition-colors truncate">
+                          {kw.name}
+                        </p>
+                        <span className="text-[10px] font-medium text-slate-400 uppercase tracking-wider">
+                          {cat.title}
+                        </span>
+                      </div>
+                    </div>
+                    <ArrowRight size={14} className="text-slate-300 group-hover:text-sky-600 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                  </Link>
+                ))
+            )}
+          </div>
+
+          {/* Project Feasibility CTA Card */}
+          <div className="mt-10 bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 text-white rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+            <div className="space-y-1 text-center md:text-left">
+              <p className="text-sky-400 text-xs font-black uppercase tracking-widest">Custom Engineering & Quotations</p>
+              <h3 className="text-lg md:text-xl font-bold">Need a Detailed Project Report (DPR) or Custom Plant Cost?</h3>
+              <p className="text-slate-400 text-xs md:text-sm">Get complete turnkey plant layout, machinery sizing, and ROI calculations customized to your source water.</p>
+            </div>
+            <Link
+              to="/contact"
+              className="bg-sky-500 hover:bg-sky-400 text-white font-bold px-6 py-3 rounded-xl text-xs md:text-sm whitespace-nowrap shadow-lg shadow-sky-500/25 transition-all flex-shrink-0 flex items-center gap-2"
+            >
+              Request Free Consultation
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>

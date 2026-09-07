@@ -6,18 +6,6 @@ const YoutubeSection: React.FC = () => {
 
     const VIDEOS = [
         { 
-            id: "OtFAZRQ32pU", 
-            title: "Fruit Juice Business & Factory Tour", 
-            desc: "An inside look at a real, low-cost, high-profit fruit juice factory and a guide on setting up your own juice business.",
-            uploadDate: "2025-02-10T10:00:00+05:30"
-        },
-        { 
-            id: "Iu4wXtPgueI", 
-            title: "Low Budget Mineral Water Plant Setup", 
-            desc: "Complete business guide and cost breakdown for starting a packaged drinking water plant on a low budget.",
-            uploadDate: "2025-03-12T14:30:00+05:30"
-        },
-        { 
             id: "VQy6xMufrVU", 
             title: "Natural & Alkaline Mineral Water Plant Cost", 
             desc: "A detailed guide on setup costs, machinery, and filtration systems for natural mineral water and alkaline water plants in India.",
@@ -28,6 +16,18 @@ const YoutubeSection: React.FC = () => {
             title: "How to Start a Packaged Mineral Water Plant", 
             desc: "Step-by-step guidance on starting a mineral water plant business, covering manufacturing, licensing, and bottle production.",
             uploadDate: "2024-11-05T11:45:00+05:30"
+        },
+        { 
+            id: "OtFAZRQ32pU", 
+            title: "Fruit Juice Business & Factory Tour", 
+            desc: "An inside look at a real, low-cost, high-profit fruit juice factory and a guide on setting up your own juice business.",
+            uploadDate: "2025-02-10T10:00:00+05:30"
+        },
+        { 
+            id: "Iu4wXtPgueI", 
+            title: "Low Budget Mineral Water Plant Setup", 
+            desc: "Complete business guide and cost breakdown for starting a packaged drinking water plant on a low budget.",
+            uploadDate: "2025-03-12T14:30:00+05:30"
         }
     ];
 

@@ -85,7 +85,9 @@ const App: React.FC = () => {
           }>
             <Routes>
               {routes.map((route) => (
-                <Route key={route.path} path={route.path} element={route.element} />
+                <React.Fragment key={route.path}>
+                  <Route path={route.path} element={route.element} />
+                </React.Fragment>
               ))}
             </Routes>
             <FloatingWhatsApp />

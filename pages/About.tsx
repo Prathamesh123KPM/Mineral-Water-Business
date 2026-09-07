@@ -50,22 +50,22 @@ const About: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen">
-      <title>About Krupashindu | Beverage Engineering Excellence</title>
-      <meta name="description" content="Learn about Krupashindu's 18+ years of expertise in manufacturing premium mineral water plants, bottling machinery, and turnkey beverage solutions." />
+      <title>Mineral Water Plant Manufacturers in India &amp; Global | About Krupashindu</title>
+      <meta name="description" content="Certified mineral water plant manufacturers &amp; bottling plant engineers since 2005. Turnkey packaged drinking water plants exported to 30+ countries." />
       <link rel="preload" href={plant} as="image" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mineralwaterbusiness.com/about" />
-      <meta property="og:title" content="About Krupashindu | Beverage Engineering Excellence" />
-      <meta property="og:description" content="Learn about Krupashindu's 18+ years of expertise in manufacturing premium mineral water plants, bottling machinery, and turnkey beverage solutions." />
+      <meta property="og:title" content="Mineral Water Plant Manufacturers in India &amp; Global | About Krupashindu" />
+      <meta property="og:description" content="Certified mineral water plant manufacturers &amp; bottling plant engineers since 2005. Turnkey packaged drinking water plants exported to 30+ countries." />
       <meta property="og:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://mineralwaterbusiness.com/about" />
-      <meta name="twitter:title" content="About Krupashindu | Beverage Engineering Excellence" />
-      <meta name="twitter:description" content="Learn about Krupashindu's 18+ years of expertise in manufacturing premium mineral water plants, bottling machinery, and turnkey beverage solutions." />
+      <meta name="twitter:title" content="Mineral Water Plant Manufacturers in India &amp; Global | About Krupashindu" />
+      <meta name="twitter:description" content="Certified mineral water plant manufacturers &amp; bottling plant engineers since 2005. Turnkey packaged drinking water plants exported to 30+ countries." />
       <meta name="twitter:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       <script type="application/ld+json">
@@ -75,12 +75,12 @@ const About: React.FC = () => {
       <section className="py-24 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-sky-200/30 to-teal-200/30 rounded-full blur-[100px] -z-10"></div>
         <div className="max-w-7xl mx-auto px-6 text-center space-y-6">
-          <h2 className="text-teal-600 text-xs font-black uppercase tracking-[0.3em]">Our Story</h2>
-          <h1 className="text-4xl md:text-8xl font-black text-slate-900 tracking-tighter leading-none">
-            Legacy of <span className="text-water-gradient">Mineral Water Plant</span> Excellence.
+          <h2 className="text-teal-600 text-xs font-black uppercase tracking-[0.3em]">Engineering Authority</h2>
+          <h1 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter leading-tight">
+            Leading <span className="text-water-gradient">Mineral Water Plant Manufacturers</span> &amp; <span className="text-water-gradient">Bottling Plant</span> Engineers
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
-            Mineral Water, Soft Drink, Fruit Juice Plant & Machinery Manufacturing by Krupashindu has been the cornerstone of industrial water treatment and beverage production since 2005.
+            As premier <strong>Mineral Water Plant Manufacturers</strong> since 2005, Krupashindu engineers turnkey <strong>Packaged Drinking Water Plants</strong>, high-speed <strong>Bottling Plants</strong>, and RO purification systems for entrepreneurs and multinational brands across 30+ nations.
           </p>
         </div>
       </section>

@@ -70,21 +70,21 @@ const Services: React.FC = () => {
 
   return (
     <div className="pt-20 min-h-screen">
-      <title>Turnkey Water & Bottling Plant Services | Krupashindu</title>
-      <meta name="description" content="Complete turnkey consulting, technical support, AMC, and plant commissioning for mineral water bottling plants & RO systems globally." />
+      <title>Turnkey Packaged Drinking Water Plant &amp; Bottling Plant Services</title>
+      <meta name="description" content="Turnkey packaged drinking water plant setups, bottling plant machinery, BIS IS:14543 lab licensing &amp; mineral water plant manufacturing by Krupashindu." />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://mineralwaterbusiness.com/services" />
-      <meta property="og:title" content="Turnkey Water & Bottling Plant Services | Krupashindu" />
-      <meta property="og:description" content="Complete turnkey consulting, technical support, AMC, and plant commissioning for mineral water bottling plants & RO systems globally." />
+      <meta property="og:title" content="Turnkey Packaged Drinking Water Plant &amp; Bottling Plant Services" />
+      <meta property="og:description" content="Turnkey packaged drinking water plant setups, bottling plant machinery, BIS IS:14543 lab licensing &amp; mineral water plant manufacturing by Krupashindu." />
       <meta property="og:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content="https://mineralwaterbusiness.com/services" />
-      <meta name="twitter:title" content="Turnkey Water & Bottling Plant Services | Krupashindu" />
-      <meta name="twitter:description" content="Complete turnkey consulting, technical support, AMC, and plant commissioning for mineral water bottling plants & RO systems globally." />
+      <meta name="twitter:title" content="Turnkey Packaged Drinking Water Plant &amp; Bottling Plant Services" />
+      <meta name="twitter:description" content="Turnkey packaged drinking water plant setups, bottling plant machinery, BIS IS:14543 lab licensing &amp; mineral water plant manufacturing by Krupashindu." />
       <meta name="twitter:image" content="https://mineralwaterbusiness.com/Homepage.webp" />
 
       <script type="application/ld+json">
@@ -95,9 +95,9 @@ const Services: React.FC = () => {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-500/20 rounded-full blur-[100px] -z-0"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-sky-500/20 rounded-full blur-[100px] -z-0"></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <h1 className="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight">Turnkey <span className="text-teal-400">Water Business</span> & <span className="text-sky-400">Plant Setup</span> Services</h1>
+          <h1 className="text-4xl md:text-7xl font-extrabold mb-6 tracking-tight">Turnkey <span className="text-teal-400">Packaged Drinking Water Plant</span> &amp; <span className="text-sky-400">Bottling Plant</span> Services</h1>
           <p className="text-sky-100 max-w-3xl mx-auto text-base md:text-lg leading-relaxed font-medium">
-            Beyond manufacturing, we provide the consulting and support necessary to launch and scale a successful **mineral water plant** or **water business** globally.
+            Beyond manufacturing, our veteran engineers provide complete turnkey execution to launch and scale your <strong>Packaged Drinking Water Plant</strong>, high-speed <strong>Bottling Plant</strong>, or commercial <strong>Mineral Water Plant</strong> globally.
           </p>
         </div>
       </section>
